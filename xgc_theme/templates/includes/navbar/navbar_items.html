@@ -1,0 +1,35 @@
+<!-- Navbar Items from Website Settings > Top Bar Items -->
+{% if top_bar_items %}
+    {% for item in top_bar_items %}
+        {% if item.parent_label %}
+            <!-- Dropdown Menu Item -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" 
+                   href="#" 
+                   id="navbar-{{ item.label | replace(' ', '-') | lower }}" 
+                   role="button" 
+                   data-toggle="dropdown" 
+                   aria-haspopup="true" 
+                   aria-expanded="false">
+                    {{ _(item.label) }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbar-{{ item.label | replace(' ', '-') | lower }}">
+                    {% for child in top_bar_items %}
+                        {% if child.parent_label == item.label %}
+                            <a class="dropdown-item" href="{{ child.url or ('/' + child.route) }}">
+                                {{ _(child.label) }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+        {% elif not item.parent_label %}
+            <!-- Regular Menu Item (no parent) -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ item.url or ('/' + item.route) }}">
+                    {{ _(item.label) }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endif %}

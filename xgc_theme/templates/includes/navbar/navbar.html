@@ -1,0 +1,102 @@
+<nav class="navbar navbar-light navbar-expand-lg">
+    <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="/">
+            {% if brand_html -%}
+                {{ brand_html }}
+            {% else %}
+                <img src="/assets/xgc_theme/media/logo/xgc-carbon-gold-logo-sq.png" 
+                     alt="{{ _('Home') }}" 
+                     style="height: 40px;">
+            {% endif %}
+        </a>
+        
+        <!-- Mobile Toggle Button (Hamburger Menu) -->
+        <button class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="{{ _('Toggle navigation') }}">
+            <span class="navbar-toggler-icon">
+                <!-- Hamburger Icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </button>
+
+        <!-- Collapsible Content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Main Navigation Items (from Website Settings > Top Bar Items) -->
+            <ul class="navbar-nav mr-auto">
+                {% include "templates/includes/navbar/navbar_items.html" %}
+            </ul>
+
+            <!-- Right Side Items -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Search Form -->
+                {% if show_search %}
+                <li class="nav-item">
+                    <form action="/search" class="form-inline my-2 my-lg-0">
+                        <input class="form-control navbar-modal-search" 
+                               type="text" 
+                               name="q" 
+                               placeholder="{{ _('Search...') }}" 
+                               aria-label="{{ _('Search') }}"
+                               value="{{ frappe.form_dict.q or '' }}">
+                    </form>
+                </li>
+                {% endif %}
+
+                <!-- User Menu (Logged In) -->
+                {% if frappe.session.user != "Guest" %}
+                <li class="nav-item dropdown logged-in" 
+                    id="website-post-login" 
+                    data-label="website-post-login">
+                    <a class="nav-link dropdown-toggle" 
+                       href="#" 
+                       id="navbarDropdownUser" 
+                       role="button" 
+                       data-toggle="dropdown" 
+                       aria-haspopup="true" 
+                       aria-expanded="false">
+                        <span class="user-image-wrapper">
+                            {{ avatar(frappe.session.user) }}
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
+                        <a class="dropdown-item" href="/me">
+                            {{ _('My Account') }}
+                        </a>
+                        {% if show_sidebar %}
+                        <a class="dropdown-item switch-to-desk" href="/app">
+                            {{ _('Switch To Desk') }}
+                        </a>
+                        {% endif %}
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout">
+                            {{ _('Log out') }}
+                        </a>
+                    </div>
+                </li>
+                {% else %}
+                <!-- Login Button (Guest User) -->
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary btn-sm" href="/login">
+                        {{ _('Login') }}
+                    </a>
+                </li>
+                {% if disable_signup != 1 %}
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary btn-sm ml-2" href="/signup">
+                        {{ _('Sign Up') }}
+                    </a>
+                </li>
+                {% endif %}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
