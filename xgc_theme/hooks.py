@@ -56,6 +56,18 @@ web_include_js = [
     "/assets/xgc_theme/js/xgc_theme.js"
 ]
 
+# Theme variants
+themes = {
+    "XGC Light": {
+        "app_include_css": app_include_css,
+        "web_include_css": web_include_css
+    },
+    "XGC Dark": {
+        "app_include_css": app_include_css + ["/assets/xgc_theme/css/xgc_dark.css"],
+        "web_include_css": web_include_css + ["/assets/xgc_theme/css/xgc_dark.css"]
+    }
+}
+
 # Fixtures
 # ---------
 # Export fixtures to be installed with the app

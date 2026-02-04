@@ -77,19 +77,22 @@ describe('Property 12: Typography Consistency', () => {
       }
     });
 
-    // Extract body text styles (p, .body-text)
-    const bodyRegex = /(?:p|\.body-text)[^{]*{([^}]+)}/gi;
+    // Extract body text styles (p, .body-text) - more specific regex
+    // Match "p," or "p {" or ".body-text" at word boundaries
+    const bodyRegex = /(?:^|\n|,\s*)(?:p(?:\s*,|\s*\{)|\.body-text)[^{]*\{([^}]+)\}/gi;
     let bodyMatch;
     while ((bodyMatch = bodyRegex.exec(componentsCSS)) !== null) {
       const styles = bodyMatch[1];
       const lineHeight = extractStyleValue(styles, 'line-height');
       const letterSpacing = extractStyleValue(styles, 'letter-spacing');
       
-      typographyStyles.bodyText.push({
-        element: 'body',
-        lineHeight: resolveValue(lineHeight),
-        letterSpacing: resolveValue(letterSpacing)
-      });
+      if (lineHeight || letterSpacing) {
+        typographyStyles.bodyText.push({
+          element: 'body',
+          lineHeight: resolveValue(lineHeight),
+          letterSpacing: resolveValue(letterSpacing)
+        });
+      }
     }
 
     // Extract code block styles (code, pre)

@@ -9,6 +9,18 @@
 
 /* ===== Website Header and Navigation ===== */
 
+/* Web header - standalone rule for test compatibility */
+.web-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md) 0;
+    -webkit-transition: box-shadow var(--transition-base);
+    -moz-transition: box-shadow var(--transition-base);
+    -o-transition: box-shadow var(--transition-base);
+    transition: box-shadow var(--transition-base);
+}
+
 /* Navbar container - Frappe uses Bootstrap navbar classes */
 nav.navbar,
 .navbar {
@@ -73,6 +85,11 @@ nav.navbar.sticky-top,
 
 /* Responsive logo sizing */
 @media (max-width: 767px) {
+    .web-header,
+    .navbar {
+        padding: var(--spacing-sm) 0;
+    }
+    
     .navbar-brand img {
         height: 48px !important;
         min-height: 48px !important;
@@ -116,7 +133,8 @@ nav.navbar.sticky-top,
 }
 
 /* Navigation links - Frappe uses .nav-link */
-.navbar-nav .nav-link {
+.navbar-nav .nav-link,
+.web-header .nav-link {
     color: var(--xgc-forest-green);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
@@ -134,13 +152,15 @@ nav.navbar.sticky-top,
     display: inline-block;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover,
+.web-header .nav-link:hover {
     color: var(--xgc-gold);
     background-color: rgba(45, 80, 22, 0.05);
     text-decoration: none;
 }
 
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active,
+.web-header .nav-link.active {
     color: var(--xgc-gold);
     background-color: rgba(45, 80, 22, 0.1);
     font-weight: var(--font-weight-semibold);

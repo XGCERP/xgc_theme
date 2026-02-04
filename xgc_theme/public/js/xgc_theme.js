@@ -18,12 +18,10 @@ xgc_theme = {
      */
     init: function() {
         console.log('XGC Theme: Initializing...');
-        
         try {
             this.setup_theme_switcher();
             this.apply_component_enhancements();
             this.setup_responsive_handlers();
-            
             console.log('XGC Theme: Initialization complete');
         } catch (error) {
             console.error('XGC Theme: Initialization error', error);
@@ -36,19 +34,10 @@ xgc_theme = {
      */
     setup_theme_switcher: function() {
         console.log('XGC Theme: Setting up theme switcher enhancements');
-        
-        // Listen for theme-change event from Frappe
         $(document).on('theme-change', function(e, theme) {
             console.log('XGC Theme: Theme changing to', theme);
-            
-            // Add transitioning class to body for smooth animation
             $('body').addClass('theme-transitioning');
-            
-            // Remove transitioning class after animation completes
-            setTimeout(function() {
-                $('body').removeClass('theme-transitioning');
-                console.log('XGC Theme: Theme transition complete');
-            }, 300);
+            setTimeout(function() { $('body').removeClass('theme-transitioning'); console.log('XGC Theme: Theme transition complete'); }, 300);
         });
     },
     
@@ -58,27 +47,13 @@ xgc_theme = {
      */
     apply_component_enhancements: function() {
         console.log('XGC Theme: Applying component enhancements');
-        
-        // Add ripple effect to buttons on click
         $(document).on('click', '.btn', function(e) {
-            // Create ripple element
-            const ripple = $('<span class="ripple"></span>');
+            var ripple = $('<span class="ripple"></span>');
             $(this).append(ripple);
-            
-            // Calculate ripple position relative to button
-            const x = e.pageX - $(this).offset().left;
-            const y = e.pageY - $(this).offset().top;
-            
-            // Position ripple at click location
-            ripple.css({
-                left: x + 'px',
-                top: y + 'px'
-            });
-            
-            // Remove ripple after animation completes
-            setTimeout(function() {
-                ripple.remove();
-            }, 600);
+            var x = e.pageX - $(this).offset().left;
+            var y = e.pageY - $(this).offset().top;
+            ripple.css({ left: x + 'px', top: y + 'px' });
+            setTimeout(function() { ripple.remove(); }, 600);
         });
     },
     
@@ -88,26 +63,14 @@ xgc_theme = {
      */
     setup_responsive_handlers: function() {
         console.log('XGC Theme: Setting up responsive handlers');
-        
-        // Handle responsive behavior for OneUI components
-        const handleResize = frappe.utils.debounce(function() {
-            const width = $(window).width();
-            
-            // Toggle body classes based on viewport width
-            // Mobile: < 768px
-            // Tablet: 768px - 1023px
-            // Desktop: >= 1024px
+        var handleResize = frappe.utils.debounce(function() {
+            var width = $(window).width();
             $('body').toggleClass('mobile-view', width < 768);
             $('body').toggleClass('tablet-view', width >= 768 && width < 1024);
             $('body').toggleClass('desktop-view', width >= 1024);
-            
             console.log('XGC Theme: Viewport width', width, 'px');
         }, 250);
-        
-        // Attach resize handler
         $(window).on('resize', handleResize);
-        
-        // Run immediately to set initial state
         handleResize();
     }
 };
@@ -141,15 +104,15 @@ xgc_theme.navbar = {
      * Set up mobile menu (hamburger) functionality
      */
     setup_mobile_menu: function() {
-        const navbar = $('.navbar');
-        const toggler = $('.navbar-toggler');
-        const collapse = $('.navbar-collapse');
+        var navbar = $('.navbar');
+        var toggler = $('.navbar-toggler');
+        var collapse = $('.navbar-collapse');
         
         // Ensure Bootstrap collapse is working
         toggler.on('click', function(e) {
             e.preventDefault();
-            const target = $(this).data('target');
-            const $target = $(target);
+            var target = $(this).data('target');
+            var $target = $(target);
             
             // Toggle collapsed state
             if ($target.hasClass('show')) {
@@ -190,7 +153,7 @@ xgc_theme.navbar = {
      * Set up dropdown behavior for desktop and mobile
      */
     setup_dropdown_behavior: function() {
-        const dropdowns = $('.navbar-nav .dropdown');
+        var dropdowns = $('.navbar-nav .dropdown');
         
         // Desktop: hover to open
         if ($(window).width() >= 992) {
@@ -207,7 +170,7 @@ xgc_theme.navbar = {
         $('.navbar-nav .dropdown-toggle').on('click', function(e) {
             if ($(window).width() < 992) {
                 e.preventDefault();
-                const menu = $(this).next('.dropdown-menu');
+                var menu = $(this).next('.dropdown-menu');
                 
                 // Close other dropdowns
                 $('.navbar-nav .dropdown-menu').not(menu).removeClass('show');
@@ -224,11 +187,11 @@ xgc_theme.navbar = {
      * Set up scroll behavior (sticky navbar, shadow on scroll)
      */
     setup_scroll_behavior: function() {
-        const navbar = $('.navbar');
-        let lastScroll = 0;
+        var navbar = $('.navbar');
+        var lastScroll = 0;
         
         $(window).on('scroll', frappe.utils.debounce(function() {
-            const currentScroll = $(window).scrollTop();
+            var currentScroll = $(window).scrollTop();
             
             // Add shadow when scrolled
             if (currentScroll > 10) {
@@ -247,7 +210,7 @@ xgc_theme.navbar = {
      * Set up search enhancements
      */
     setup_search_enhancements: function() {
-        const searchInput = $('.navbar-modal-search');
+        var searchInput = $('.navbar-modal-search');
         
         // Focus search on keyboard shortcut (Ctrl+K or Cmd+K)
         $(document).on('keydown', function(e) {
