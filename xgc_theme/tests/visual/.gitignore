@@ -1,0 +1,10 @@
+# Ignore test screenshots and reports (keep only reference baselines)
+backstop_data/bitmaps_test/
+backstop_data/html_report/
+backstop_data/ci_report/
+
+# Ignore authentication cookies (sensitive data)
+backstop_data/engine_scripts/cookies.json
+
+# Keep reference baselines in version control
+!backstop_data/bitmaps_reference/

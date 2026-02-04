@@ -1,0 +1,4191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>OneUI Vue Docs by pixelcave</title>
+
+    <meta
+      name="description"
+      content="OneUI Vue Edition documentation created by pixelcave"
+    />
+    <meta name="author" content="pixelcave" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Icons -->
+    <link
+      rel="icon"
+      href="assets/media/favicon.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link rel="icon" href="assets/media/favicon.png" type="image/png" />
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=nunito:300,400,400i,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/docs.min.css" />
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <div id="page-container" class="sidebar-o side-scroll">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+          <div class="content-side content-side-full pos-relative">
+            <!-- Close Sidebar, Visible only on mobile screens -->
+            <div class="pos-absolute pos-top-right d-lg-none">
+              <a
+                class="d-inline-block text-danger m-3"
+                href="javascript:void(0)"
+                data-toggle="layout"
+                data-action="sidebar_close"
+              >
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+            <!-- END Close Sidebar -->
+
+            <!-- Side Header -->
+            <div class="mb-3">
+              <h1 class="font-size-lg font-w700 mb-2">
+                OneUI Vue <a href="">Docs</a>
+              </h1>
+              <div class="font-size-sm font-w600 text-muted">
+                v3.2 - November 11, 2025
+              </div>
+            </div>
+            <!-- END Side Header -->
+
+            <!-- Side Navigation -->
+            <ul class="nav-main">
+              <li class="nav-main-heading">Template</li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-changelog"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-list text-primary"></i>
+                  <span class="nav-main-link-name">Changelog</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-updating"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-arrow-up text-primary"></i>
+                  <span class="nav-main-link-name">Updating</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Intro</li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-package"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-briefcase text-muted"></i>
+                  <span class="nav-main-link-name">Package</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-bootstrap"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-rocket text-muted"></i>
+                  <span class="nav-main-link-name">Bootstrap</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-vite"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-wrench text-muted"></i>
+                  <span class="nav-main-link-name">Vite</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-getting-started"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-flag text-muted"></i>
+                  <span class="nav-main-link-name">Getting Started</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Structure</li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-html"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-code text-info"></i>
+                  <span class="nav-main-link-name">HTML</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-sass"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-code text-info"></i>
+                  <span class="nav-main-link-name">Sass</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-directives"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fab fa-vuejs text-info"></i>
+                  <span class="nav-main-link-name">Directives</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-components"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fab fa-vuejs text-info"></i>
+                  <span class="nav-main-link-name">Components</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-plugins"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fab fa-vuejs text-info"></i>
+                  <span class="nav-main-link-name">Plugins</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">More</li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-tips"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i
+                    class="nav-main-link-icon fa fa-thumbs-up text-warning"
+                  ></i>
+                  <span class="nav-main-link-name">Quick Tips</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-credits"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-link text-warning"></i>
+                  <span class="nav-main-link-name">Credits</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Pixelcave</li>
+              <li class="nav-main-item">
+                <a
+                  class="nav-main-link"
+                  href="#section-thankyou"
+                  data-toggle="scroll-to"
+                  data-offset="50"
+                >
+                  <i class="nav-main-link-icon fa fa-heart text-danger"></i>
+                  <span class="nav-main-link-name">Thank you</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="https://pixelcave.com">
+                  <i class="nav-main-link-icon fa fa-globe text-danger"></i>
+                  <span class="nav-main-link-name">pixelcave.com</span>
+                </a>
+              </li>
+            </ul>
+            <!-- END Side Navigation -->
+          </div>
+        </div>
+        <!-- Sidebar Content -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Toggle Sidebar -->
+        <div class="pos-fixed pos-ontop-content d-print-none">
+          <button
+            type="button"
+            class="btn btn-secondary pos-absolute pos-top-left m-1 m-lg-3"
+            data-toggle="layout"
+            data-action="sidebar_toggle"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- END Toggle Sidebar -->
+
+        <!-- Pixelcave Links -->
+        <div class="content d-print-none">
+          <div class="row text-center py-5 no-gutters">
+            <div class="col-6 col-md-3 py-3">
+              <a class="item item-tailwindcss" href="https://www.tailkit.com">
+                <div class="item-icon bg-transparent">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    class="inline-block transition duration-150 ease-out h-6 w-6 group-hover:-rotate-12 group-active:rotate-0"
+                  >
+                    <circle
+                      cx="128"
+                      cy="128"
+                      r="120"
+                      fill-opacity="0"
+                      stroke="#13cdc6"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                      fill="#293340"
+                    ></circle>
+                    <circle cx="128" cy="128" r="96" fill="#293340"></circle>
+                    <path
+                      d="M130.424 165.032a20 20 0 01-14.142 24.495l-8.842 2.373a20 20 0 01-24.495-14.142l-2.369-8.842a20 20 0 0114.142-24.5l8.842-2.369a20 20 0 0124.5 14.142z"
+                      fill="#818cf8"
+                      fill-rule="evenodd"
+                    ></path>
+                    <path
+                      d="M191.9 148.561a20 20 0 01-14.143 24.5l-8.842 2.369a20 20 0 01-24.494-14.142l-2.37-8.842a20 20 0 0114.142-24.5l8.842-2.369a20 20 0 0124.5 14.142z"
+                      fill="#f472b6"
+                      fill-rule="evenodd"
+                    ></path>
+                    <path
+                      d="M113.953 103.561a20 20 0 01-14.142 24.5l-8.842 2.369a20 20 0 01-24.495-14.142l-2.369-8.842a20 20 0 0114.142-24.5l8.842-2.369a20 20 0 0124.495 14.142z"
+                      fill="#34d399"
+                      fill-rule="evenodd"
+                    ></path>
+                    <path
+                      d="M175.424 87.09a20 20 0 01-14.142 24.495l-8.842 2.369a20 20 0 01-24.5-14.142l-2.369-8.842a20 20 0 0114.142-24.495l8.842-2.369a20 20 0 0124.5 14.142z"
+                      fill="#fbbf24"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="item-text px-1">Tailkit with Tailwind CSS</div>
+              </a>
+            </div>
+            <div class="col-6 col-md-3 py-3">
+              <a
+                class="item item-danger"
+                href="https://pixelcave.com/#subscribe"
+              >
+                <div class="item-icon">
+                  <i class="fa fa-fw fa-envelope-open font-size-1-5"></i>
+                </div>
+                <div class="item-text px-1">Subscribe for freebies</div>
+              </a>
+            </div>
+            <div class="col-6 col-md-3 py-3">
+              <a
+                class="item item-x"
+                href="https://x.com/intent/follow?screen_name=pixelcave"
+              >
+                <div class="item-icon">
+                  <i class="fab fa-fw fa-x-twitter font-size-1-5"></i>
+                </div>
+                <div class="item-text px-1">Find us on X (Twitter)</div>
+              </a>
+            </div>
+            <div class="col-6 col-md-3 py-3">
+              <a class="item item-success" href="https://pixelcave.com">
+                <div class="item-icon">
+                  <i class="fa fa-fw fa-briefcase font-size-1-5"></i>
+                </div>
+                <div class="item-text px-1">Check out more projects</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- END Pixelcave Links -->
+
+        <!-- Page Content -->
+        <div class="content">
+          <!-- Changelog -->
+          <h2 id="section-changelog" class="mt-0">Changelog</h2>
+          <div class="accordion" id="changelog">
+            <!-- Update 3.2 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update32-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update32-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update32-c"
+                  >
+                    3.2 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">November 11, 2025</div>
+              </div>
+              <div
+                id="changelog-update32-c"
+                class="collapse show"
+                aria-labelledby="changelog-update32-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fortawesome/fontawesome-free 7.1.0 (6.7.2) - 29 new icons
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fullcalendar/* 6.1.19 (6.1.15)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/* 3.10.5 (2.11.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      bootstrap 5.3.8 (5.3.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      chart.js 4.5.1 (4.4.8)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      pinia 3.0.4 (3.0.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      simplebar 6.3.3 (6.3.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sweetalert2 11.23.6 (11.17.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-chartsjs 5.3.3 (5.3.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-flatpickr-component 12.0.0 (11.0.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-router 4.6.3 (4.5.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      Vue-dataset 3.7.1 (3.7.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vitejs/plugin-vue 6.0.1 (5.2.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint 9.39.1 (9.21.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      prettier 3.6.2 (3.5.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vite 7.2.2 (6.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue 3.5.24 (3.5.13)
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      Added <code>patch-package 8.0.1</code> npm package
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      Added <code>ckeditor5 47.2.0</code> npm package
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <code>main.scss</code>: Updated Font Awesome imports from
+                      SCSS to CSS
+                      <ul>
+                        <li>
+                          Changed from
+                          <code
+                            >@import
+                            "@fortawesome/fontawesome-free/scss/*"</code
+                          >
+                          to
+                          <code
+                            >@import
+                            "@fortawesome/fontawesome-free/css/all.css"</code
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <code>vendor/_simplebar.scss</code>: Updated Simplebar
+                      import from <code>"simplebar/dist/simplebar.css"</code> to
+                      <code>"simplebar/dist/simplebar.min.css"</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      CKEditor 5:
+                      <a
+                        href="https://ckeditor.com/docs/ckeditor5/latest/updating/nim-migration/predefined-builds.html"
+                        >Migrating from predefined builds packages</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 3.2 -->
+
+            <!-- Update 3.1 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update31-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update31-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update31-c"
+                  >
+                    3.1 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">March 6, 2025</div>
+              </div>
+              <div
+                id="changelog-update31-c"
+                class="collapse"
+                aria-labelledby="changelog-update31-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i>
+                      Laravel 12
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/* 44.3.0 (43.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/ckeditor-vue 7.3.0 (7.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @chenfengyuan/vue-countdown 2.1.3 (2.1.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fortawesome/fontawesome-free 6.7.2 (6.6.0) - 10 new icons
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/starter-kit 2.11.5 (2.8.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/vue-3 2.11.5 (2.8.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      chart.js 4.4.8 (4.4.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      highlight.js 11.11.1 (11.10.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      pinia 3.0.1 (2.2.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      simplebar 6.3.0 (6.2.7)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sweetalert2 11.17.2 (11.14.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-chartsjs 5.3.2 (5.3.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-router 4.5.0 (4.4.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vitejs/plugin-vue 5.2.1 (5.1.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint 9.21.0 (8.57.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint-plugin-vue 9.33.0 (9.28.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      prettier 3.5.3 (3.5.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vite 6.2.0 (5.4.8)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      Laravel Version: Laravel 12.1.1 (11.27.2)
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Validation
+                      messages now display correctly with other color themes
+                    </li>
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Validation
+                      style with alternate forms now display correctly with
+                      other color themes
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <a href="https://laravel.com/docs/12.x/upgrade"
+                        >Laravel 12 upgrade guide</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      Added an <code>@scss</code> alias in
+                      <code>vite.config.js</code> (Laravel version)
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <a
+                        href="https://pinia.vuejs.org/cookbook/migration-v2-v3.html"
+                        >Pinia 3.0 upgrade guide</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <a
+                        href="https://ckeditor.com/docs/ckeditor5/latest/getting-started/licensing/license-key-and-activation.html#using-the-license-key"
+                        >CKEditor now needs a License Key to be specified when
+                        initialized</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 3.1 -->
+
+            <!-- Update 3.0 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update30-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update30-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update30-c"
+                  >
+                    3.0 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">October 11, 2024</div>
+              </div>
+              <div
+                id="changelog-update30-c"
+                class="collapse"
+                aria-labelledby="changelog-update30-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i>
+                      Brand new Laravel 11 + Inertia.js + Vue.js + Auth version
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i>
+                      Dark mode improved (remember functionality)
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i>
+                      Dark mode display classes (<code>.d-dark-none</code>,
+                      <code>.d-dark-inline-block</code>,
+                      <code>.d-dark-block</code>, <code>.d-dark-flex</code>,
+                      <code>.d-dark-inline-flex</code>)
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/* 43.2.0 (41.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/ckeditor-vue 7.2.0 (5.1.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckpack/vue-color 1.6.0 (1.5.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fortawesome/fontawesome-free 6.6.0 (6.5.1) - 13new icons
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fullcalendar 6.1.15 (6.1.11)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/starter-kit 2.8.0 (2.2.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/vue-3 2.8.0 (2.2.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vueform/slider 2.1.10 (2.1.7)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      chart.js 4.4.4 (4.4.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      highlight.js 11.10.0 (11.9.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      pinia 2.2.4 (2.1.7)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      simplebar 6.2.7 (6.2.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sweetalert2 11.14.2 (11.10.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue 3.5.11 (3.4.21)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-chartsjs 5.3.1 (5.3.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-dataset 3.7.0 (3.6.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-router 4.4.5 (4.3.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vitejs/plugin-vue 5.1.2 (5.0.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      Eslint 8.57.1 (8.57.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint-plugin-vue 9.28.0 (9.23.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sass 1.77.6 (1.71.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vite 5.4.8 (5.1.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      Laravel Version: Laravel 11.27.2 (11.0.3)
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Various
+                      small fixes and improvements
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      New Laravel version
+                      <ul>
+                        <li>
+                          Vue Router was replaced with Inertia.js and
+                          unfortunately, an upgrade is not an easy task because
+                          many things have changed. Our suggestion would be to
+                          directly use it in new project but feel free to let us
+                          know if you need any assistance with a possible
+                          upgrade.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      Dark Mode
+                      <ul>
+                        <li>
+                          Make sure that you've updated
+                          <code>src/layouts/BaseLayout.vue</code>,
+                          <code>src/layouts/partials/Sidebar.vue</code>
+                          and your
+                          <code>store/template.js</code>
+                          files with the new ones because the dark mode
+                          functionality is changed.
+                        </li>
+                        <li>
+                          Moreover, please use the new dark mode dropdown
+                          selector
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      @ckeditor/ckeditor5-vue 7.0
+                      <a
+                        href="https://github.com/ckeditor/ckeditor5-vue/releases/tag/v7.0.0"
+                        >upgrade guide</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 3.0 -->
+
+            <!-- Update 2.7 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update27-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update27-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update27-c"
+                  >
+                    2.7 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">March 15, 2024</div>
+              </div>
+              <div
+                id="changelog-update27-c"
+                class="collapse"
+                aria-labelledby="changelog-update27-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i>
+                      Laravel 11
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      bootstrap 5.3.3 (5.3.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/* 41.2.0 (40.0.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fortawesome/fontawesome-free 6.5.1 (6.4.2) - 12 new icons
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fullcalendar 6.1.11 (6.1.9)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/starter-kit 2.2.4 (2.1.11)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/vue-3 2.2.4 (2.1.11)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vueform/slider 2.1.10 (2.1.7)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      chart.js 4.4.2 (4.4.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      pinia 2.1.7 (2.1.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sweetalert2 11.10.6 (11.7.32)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue 3.4.21 (3.2.31)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-chartsjs 5.3.0 (5.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-easy-lightbox 1.19.0 (1.16.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-flatpickr-component 11.0.5 (11.0.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-router 4.3.0 (4.2.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vitejs/plugin-vue 5.0.4 (4.4.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint 8.57.0 (8.51.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint-plugin-vue 9.23.0 (9.17.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sass 1.71.1 (1.69.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vite 5.1.6 (4.3.9)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      Laravel Version: Laravel 11 (10.28.0)
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Removed
+                      backdrop filter from header
+                    </li>
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Removed
+                      horizontal scrollbar from mini sidebar
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      Laravel 11
+                      <a href="https://laravel.com/docs/11.x/">upgrade guide</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <code>@import &quot;oneui/fonts&quot;;</code> was added to
+                      <code>src/assets/scss/main.scss</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <code>&quot;type&quot;: &quot;module&quot;</code> was
+                      added to <code>package.json</code>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 2.7 -->
+
+            <!-- Update 2.6 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update26-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update26-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update26-c"
+                  >
+                    2.6 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">October 12, 2023</div>
+              </div>
+              <div
+                id="changelog-update26-c"
+                class="collapse"
+                aria-labelledby="changelog-update26-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i>
+                      Elements
+                      <ul>
+                        <li>Steps</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i>
+                      Authentication
+                      <ul>
+                        <li>Two Factor</li>
+                        <li>Two Factor Alternate</li>
+                        <li>Two Factor Full Page</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >bootstrap 5.3.2 (5.3.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@chenfengyuan/vue-countdown 2.1.2 (2.1.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@ckeditor/* 40.0.0 (38.1.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@fortawesome/fontawesome-free 6.4.2 (6.4.0) - 5 new
+                      icons, including X (Twitter)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@fullcalendar 6.1.9 (6.1.8)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@tiptap/starter-kit 2.1.11 (2.0.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@tiptap/vue-3 2.1.11 (2.0.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@vuelidate/validators 2.0.4 (2.0.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >highlight.js 11.9.0 (11.8.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>pinia
+                      2.1.6 (2.1.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >chart.js 4.4.0 (4.3.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >sweetalert2 11.7.32 (11.7.12)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-dataset 3.6.1 (3.5.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@vitejs/plugin-vue 4.4.0 (4.2.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >eslint 8.51.0 (8.44.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >eslint-plugin-vue 9.17.0 (9.15.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>sass
+                      1.69.1 (1.63.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>vite
+                      4.4.11 (4.3.9)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-router 4.2.5 (4.2.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >Laravel Starter Kit: Laravel 10.28.0 (10.14.1)
+                    </li>
+                  </ul>
+                  <h4>Improvements</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Various
+                      design improvements
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-heartbeat fa-li text-danger"></i> Various
+                      small fixes
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 2.6 -->
+
+            <!-- Update 2.5 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update25-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update25-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update25-c"
+                  >
+                    2.5 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">July 5, 2023</div>
+              </div>
+              <div
+                id="changelog-update25-c"
+                class="collapse"
+                aria-labelledby="changelog-update25-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Bootstrap
+                      5.3.0
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Installation
+                      Page
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Checkout
+                      Page
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >bootstrap 5.3.0 (5.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@chenfengyuan/vue-countdown 2.1.1 (2.1.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@ckeditor/* 38.1.0 (36.0.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@vuelidate/core 2.0.3 (2.0.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@ckeditor/ckeditor5-vue 5.1.0 (4.0.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@popperjs/core 2.11.8 (2.11.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >highlight.js 11.8.0 (11.7.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>pinia
+                      2.1.4 (2.1.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >simplebar 6.2.5 (6.2.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >sweetalert2 11.7.12 (11.7.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-dataset 3.5.4 (3.5.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-easy-lightbox 1.16.0 (1.14.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-flatpickr-component 11.0.3 (11.0.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >eslint 8.44.0 (8.40.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >eslint-plugin-vue 9.15.1 (9.13.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>sass
+                      1.63.4 (1.58.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>vite
+                      4.3.9 (4.1.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>vue
+                      3.3.4 (3.2.47)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-router 4.2.2 (4.1.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >Laravel Version: Laravel 10.14.1 (10.3.2)
+                    </li>
+                  </ul>
+                  <h4>Improvements</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Various
+                      design improvements
+                    </li>
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> New font
+                      weight classes: <code>fw-extrabold</code> &amp;
+                      <code>fw-black</code>
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-heartbeat fa-li text-danger"></i> Various
+                      fixes and improvements to dark mode
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 2.5 -->
+
+            <!-- Update 2.4 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update24-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update24-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update24-c"
+                  >
+                    2.4 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">March 10, 2023</div>
+              </div>
+              <div
+                id="changelog-update24-c"
+                class="collapse"
+                aria-labelledby="changelog-update24-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Laravel
+                      Version: Laravel 10
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@ckeditor/* 36.0.1 (35.3.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@ckpack/vue-color 1.4.1 (1.3.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@fortawesome/fontawesome-free 6.3.0 (6.2.1) - 4 new icons
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@fullcalendar/* 6.3.0 (5.11.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@vueform/slider 2.1.7 (2.1.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >chart.js 4.2.1 (3.9.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>pinia
+                      2.0.33 (2.0.27)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >simplebar 6.2.1 (5.3.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >sweetalert2 11.7.3 (11.6.15)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-chartjs 5.2.0 (4.1.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-dataset 3.5.3 (3.4.9)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-easy-lightbox 1.14.0 (1.11.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >vue-flatpickr-component 11.0.2 (11.0.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >@vitejs/plugin-vue 4.0.0 (3.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >eslint 8.35.0 (8.29.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >eslint-plugin-vue 9.9.0 (9.8.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>sass
+                      1.58.3 (1.56.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>vite
+                      4.1.4 (3.2.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i
+                      >Laravel Version: Laravel 10.3.2 (9.42.2)
+                    </li>
+                  </ul>
+                  <h4>Improvements</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> You can now
+                      add external links to the main menu array and they will
+                      render correctly as anchor links
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-heartbeat fa-li text-danger"></i> Themed
+                      blocks now render correctly in dark mode
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Chart.js was
+                      upgraded to 4.x version. Please check out the following
+                      migration guides for info:
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.chartjs.org/docs/latest/migration/v4-migration.html"
+                            >https://www.chartjs.org/docs/latest/migration/v4-migration.html</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://vue-chartjs.org/migration-guides/"
+                            >https://vue-chartjs.org/migration-guides/</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> FullCalendar
+                      was upgraded to 6.x version. Please check out the
+                      following migration guide for info:
+                      <ul>
+                        <li>
+                          <a
+                            href="https://fullcalendar.io/docs/upgrading-from-v5"
+                            >https://fullcalendar.io/docs/upgrading-from-v5</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 2.4 -->
+
+            <!-- Update 2.3 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update23-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update23-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update23-c"
+                  >
+                    2.3 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">December 6, 2022</div>
+              </div>
+              <div
+                id="changelog-update23-c"
+                class="collapse"
+                aria-labelledby="changelog-update23-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Profile Edit
+                    </li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Team</li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Contact
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Support
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      bootstrap 5.2.3 (5.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @chenfengyuan/vue-countdown 2.1.0 (2.0.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/* 35.3.2 (35.0.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckpack/vue-color 1.3.0 (1.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fortawesome/fontawesome-free 6.2.1 (6.1.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fullcalendar/* 5.11.3 (5.11.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @popperjs/core 2.11.6 (2.11.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/starter-kit 2.0.0-beta.205 (2.0.0-beta.191)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/vue-3 2.0.0-beta.205 (2.0.0-beta.96)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vueform/slider 2.1.5 (2.1.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vuelidate/core 2.0.0 (2.0.0-alpha.44)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vuelidate/validators 2.0.0 (2.0.0-alpha.31)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      highlight.js 11.7.0 (11.6.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      pinia 2.0.27 (2.0.17)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      simplebar 5.3.9 (5.3.8)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sweetalert2 11.6.15 (11.4.26)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-dataset 3.4.9 (3.4.8)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-easy-lightbox 1.11.0 (1.7.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-flatpickr-component 11.0.1 (9.0.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-router 4.1.6 (4.1.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-select 4.0.0-beta.6 (4.0.0-beta.3)
+                    </li>
+
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vitejs/plugin-vue 3.2.0 (3.0.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint 8.29.0 (8.21.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint-plugin-vue 9.8.0 (9.3.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> sass
+                      1.56.1 (1.54.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> vite
+                      3.2.5 (3.0.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> vue
+                      3.2.45 (3.2.40)
+                    </li>
+
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      Laravel Version: Laravel 9.42.2 (9.23.0)
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Replaced
+                      <code>vue-chart-3</code> with <code>vue-chartjs</code>,
+                      more info can be found at the official
+                      <a
+                        href="https://vue-chartjs.org/migration-guides/#uninstall-vue-chart-3"
+                        >migration guide</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Replaced
+                      <code>vue-select</code> styles (after a recent changed to
+                      its build files):
+                      <ul>
+                        <li>
+                          From
+                          <code>@import "vue-select/src/scss/vue-select";</code>
+                          to
+                          <code>@import "vue-select/dist/vue-select.css";</code>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 2.3 -->
+
+            <!-- Update 2.2 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update22-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update22-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update22-c"
+                  >
+                    2.2 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">August 10, 2022</div>
+              </div>
+              <div
+                id="changelog-update22-c"
+                class="collapse"
+                aria-labelledby="changelog-update22-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Offcanvas
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Mini
+                      navigation in sidebar example
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Blocks with
+                      Footer
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Forms with
+                      floating labels (plaintext and input groups examples)
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Centered
+                      Dropdowns
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Laravel 9
+                      (with Vite) version
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      bootstrap 5.2.0 (5.1.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/* 35.0.1 (34.2.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fortawesome/fontawesome-free 6.1.2 (6.1.1) - 10 new icons
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fullcalendar/* 5.11.2 (5.11.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vueform/slider 2.1.2 (2.1.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vuelidate/core 2.0.0-alpha.44 (2.0.0-alpha.42)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vuelidate/core 2.0.0-alpha.44 (2.0.0-alpha.42)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      chart.js 3.9.1 (3.8.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sweetalert2 11.4.26 (11.4.22)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-dataset 3.4.8 (3.4.5)
+                    </li>
+
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-easy-lightbox 1.7.1 (1.5.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-router 4.1.3 (4.1.2)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vitejs/plugin-vue 3.0.1 (3.0.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint 8.21.0 (8.19.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint-plugin-vue 9.3.0 (9.1.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> sass
+                      1.54.3 (1.53.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> vite
+                      3.0.4 (3.0.0)
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i>
+                      <code>components/BaseBlock.vue</code> updated with footer
+                      support
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Mini Nav in
+                      Sidebar support
+                      <ul>
+                        <li>
+                          <code>layouts/BaseLayout.vue</code> updated and
+                          <code>sidebarWithMiniNav</code> prop was added
+                        </li>
+                        <li>
+                          <code>layouts/partials/Sidebar.vue</code> updated and
+                          <code>withMiniNav</code> prop was added
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Added
+                      <code>bootstrap/maps.scss</code> to
+                      <code>_scss/main.scss</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Added
+                      <code>bootstrap/offcanvas.scss</code> to
+                      <code>_scss/main.scss</code>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 2.2 -->
+
+            <!-- Update 2.1 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0" id="changelog-update21-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update21-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update21-c"
+                  >
+                    2.1 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">July 15, 2022</div>
+              </div>
+              <div
+                id="changelog-update21-c"
+                class="collapse"
+                aria-labelledby="changelog-update21-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Blog Pages
+                      <ul class="fa-ul">
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Classic
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> List
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Grid
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Story
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Story
+                          Cover
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> eLearning
+                      Pages
+                      <ul class="fa-ul">
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Courses
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Course
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Lesson
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Forum Pages
+                      <ul class="fa-ul">
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i>
+                          Categories
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i> Topics
+                        </li>
+                        <li>
+                          <i class="fa fa-plus fa-li text-success"></i>
+                          Discussion
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Card’s
+                      design now match Block’s design
+                    </li>
+                  </ul>
+                  <h4>Improvements</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Various
+                      small design improvements
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-heartbeat fa-li text-danger"></i> Various
+                      small fixes
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/* 34.2.0 (33.0.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckeditor/ckeditor5-vue 4.0.1 (3.0.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @ckpack/vue-color 1.2.0 (1.1.8)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fortawesome/fontawesome-free 6.1.1 (6.1.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @fullcalendar/* 5.11.0 (5.10.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @popperjs/core 2.11.5 (2.11.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vueform/slider 2.1.1 (2.0.9)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/starter-kit 2.0.0-beta.191 (2.0.0-beta.189)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @tiptap/vue-3 2.0.0-beta.96 (2.0.0-beta.95)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vuelidate/core 2.0.0-alpha.42 (2.0.0-alpha.41)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vuelidate/validators 2.0.0-alpha.30 (2.0.0-alpha.29)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      pinia 2.0.15 (2.0.12)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      simplebar 5.3.8 (5.3.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      sweetalert2 11.4.22 (11.4.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-chart-3 3.1.8 (3.1.6)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-dataset 3.4.5 (3.4.3)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-easy-lightbox 1.5.0 (1.4.1)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-flatpickr-component 9.0.6 (9.0.5)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      vue-router 4.1.2 (4.0.14)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      @vitejs/plugin-vue 3.0.0 (2.2.4)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint 8.19.0 (8.11.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i>
+                      eslint-plugin-vue 9.1.1 (8.5.0)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> sass
+                      1.53.0 (1.49.9)
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> vite
+                      3.0.0 (2.8.6)
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Removed
+                      <code>component: RouterView</code> from all routes and
+                      updated Nprogress code in
+                      <code>src/router/index.js</code> file
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Run
+                      <code>npm install chart.js highlight.js</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Added
+                      <code>_card.scss</code> to
+                      <code>_scss/main.scss</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Removed
+                      <code>$theme-*-headings-color</code> variable from color
+                      themes
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 2.1 -->
+
+            <!-- Release 2.0 -->
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <h5 class="mb-0">2.0 Release</h5>
+                <div class="font-size-sm text-muted">March 24, 2022</div>
+              </div>
+            </div>
+            <!-- END Release 1.0 -->
+          </div>
+          <!-- END Changelog -->
+
+          <!-- Updating -->
+          <h2 id="section-updating">Updating</h2>
+          <p>
+            One of the main goals was to make sure the update progress is going
+            to be as easy as possible. Due to its nature (template), updating
+            can become an unpleasant task.
+          </p>
+          <p>
+            Therefore we’ve tried to make it as easy as possible to let you
+            apply your own overrides (in case you would like to) to Sass
+            (<code>src/assets/scss/</code>) files without altering the original
+            files. Please check
+            <a href="#section-sass" data-toggle="scroll-to" data-offset="50"
+              >Sass</a
+            >
+            section for more info!
+          </p>
+          <p>
+            In general, the following core folders/files will have to be updated
+            with each update:
+          </p>
+          <div class="bg-body-light p-3 rounded push">
+            <h3 class="mt-0">Vue.js version</h3>
+            <ul class="fa-ul mb-0">
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>public/assets/fonts/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>src/assets/scss/oneui/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>src/assets/scss/vendor/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>src/directives/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>src/components/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>src/layouts/BaseLayout.vue</code>
+              </li>
+            </ul>
+
+            <h3>Laravel + Vue.js version</h3>
+            <ul class="fa-ul mb-0">
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>resources/fonts/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>resources/scss/oneui/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>resources/scss/vendor/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>resources/js/directives/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>resources/js/components/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>resources/js/layouts/BaseLayout.vue</code>
+              </li>
+            </ul>
+          </div>
+          <p>
+            After copying over the new files, please make sure that you’ve read
+            the
+            <a
+              href="#section-changelog"
+              data-toggle="scroll-to"
+              data-offset="50"
+              >changelog</a
+            >. If a new dependency is added, a file needs to be updated or a
+            breaking change was made to your markup, we will let you know, so
+            you can apply those additional changes in your project.
+          </p>
+          <p>
+            Finally, after applying any possible changes, you will just have to
+            run <code>npm update --save</code> from your system’s console to
+            update all your project’s dependencies. Also, be sure that you also
+            upgrade your dependencies to any major version based on the
+            <a
+              href="#section-changelog"
+              data-toggle="scroll-to"
+              data-offset="50"
+              >changelog</a
+            >.
+          </p>
+          <p class="alert alert-warning">
+            Remember that it’s always a good idea to backup your work before
+            updating to a new version!
+          </p>
+          <p class="alert alert-primary">
+            When a new update becomes available, you will be able to download it
+            from
+            <a class="font-w600" href="https://1.envato.market/jeV0n"
+              >Themeforest</a
+            >. You can check the checkbox under the product (<em>
+              <i class="far fa-check-square"></i> Get notified by email if this
+              item is updated</em
+            >),
+            <a
+              class="font-w600"
+              href="https://x.com/intent/follow?screen_name=pixelcave"
+              >follow us on X (Twitter)</a
+            >
+            or
+            <a class="font-w600" href="https://pixelcave.com/#subscribe"
+              >subscribe to our news</a
+            >
+            to stay up to date about the availability of new updates.
+          </p>
+          <!-- END Updating -->
+
+          <!-- Package -->
+          <h2 id="section-package">Package</h2>
+          <p>
+            <strong>OneUI Vue Edition</strong> was built with extra care based
+            on the valuable feedback we keep receiving over the past years
+            working full-time on dashboard templates. It follows the best
+            practices using the latest technologies and we really hope that you
+            will enjoy working with it. <strong>OneUI Vue Edition</strong> will
+            enable you to build fast, beautiful, user friendly web applications
+            and websites that will work seamlessly across various screens and
+            devices.
+          </p>
+          <p>Let's have a look at the contents of the current package:</p>
+          <ul class="fa-ul">
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>01 - OneUI Vue Edition Source</code>
+              <div>
+                Includes the source code of the project. Vite tooling was used
+                to build it, so feel free to have a look at the
+                <a href="#section-vite" data-toggle="scroll-to" data-offset="50"
+                  >related section</a
+                >
+                to get started.
+              </div>
+            </li>
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>02 - OneUI Vue Edition Source (Laravel)</code>
+              <div>
+                If you are using Laravel to build your next project, then this
+                version is the perfect fit. It features a clean Laravel
+                installation with OneUI Vue Edition integrated and ready to work
+                with Inertia.js. Authentication features based on
+                <a href="https://github.com/laravel/breeze">Laravel Breeze</a>
+                are already implemented and an SQLite database is used by
+                default. You can either take the parts you want and integrate
+                them into your current project or you can run the following
+                commands to install all dependencies and start building with
+                Laravel like you would normally do.
+              </div>
+              <ul class="fa-ul">
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i>
+                  <code
+                    >composer install && npm install && php artisan
+                    key:generate</code
+                  >
+                </li>
+              </ul>
+              <div>
+                Afterwards, you can use the following Laravel (+ Vite) commands
+                you already now and love:
+              </div>
+              <ul class="fa-ul">
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i>
+                  <code>php artisan serve</code><br />Serves your project
+                </li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i>
+                  <code>npm run dev</code><br />Watches your files, compiles
+                  your assets on the fly and auto reloads your browser (must be
+                  run alongside with the previous command)
+                </li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i>
+                  <code>npm run build</code><br />Compiles and prepares your
+                  assets for production
+                </li>
+              </ul>
+              <div>
+                Please have in mind that you have to already be familiar with
+                Laravel to use this version. If you are interested in learning
+                Laravel, you can have a look at the
+                <a href="https://laravel.com/docs/12.x/"
+                  >official documentation</a
+                >.
+              </div>
+            </li>
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>Documentation</code>
+              <div>Of course, it includes current documentation!</div>
+            </li>
+          </ul>
+          <div class="alert alert-primary">
+            The following documentation was written with Vue.js version in mind
+            but applies for the Laravel version as well. Please have in mind
+            that your source code in the Laravel version can be found under the
+            <code>resources/</code> folder instead of the <code>src/</code> one.
+          </div>
+          <!-- END Package -->
+
+          <!-- Bootstrap -->
+          <h2 id="section-bootstrap">Bootstrap</h2>
+          <p>
+            <a href="http://getbootstrap.com/">Bootstrap</a> is the world's most
+            popular front-end component library. It is easy to use and offers a
+            large variety of CSS as well as JavaScript components.
+            <strong>OneUI Vue Edition</strong> uses this framework at its core
+            and builds on top its unique UI layout and features. It extends the
+            original styles and introduces new ones, featuring a modern and
+            clean design.
+          </p>
+          <p>
+            If you are unfamiliar with the framework, its
+            <a href="https://getbootstrap.com/docs/5.3/">official website</a>
+            will help you out a lot but if you just want to start quickly, you
+            can easily replicate any feature or component we already present in
+            <strong>OneUI Vue Edition</strong> pages. If you find a feature in
+            the official Bootstrap Docs you would like to use, feel free to,
+            since they are all available in <strong>OneUI Vue Edition</strong>.
+            Please have in mind that we currently use a custom made dark mode
+            and not Bootstrap's dark mode system (variables + approach).
+          </p>
+          <!-- END Bootstrap -->
+
+          <!-- Vite -->
+          <h2 id="section-vite">Vite (Vue.js version)</h2>
+          <p>
+            <a href="https://vitejs.dev/">Vite</a> is a build tool that aims to
+            provide a faster and leaner development experience for modern web
+            projects. It consists of a dev server that provides rich feature
+            enhancements over native ES modules, for example extremely fast Hot
+            Module Replacement (HMR) and a build command that bundles your code
+            with Rollup, pre-configured to output highly optimized static assets
+            for production.
+          </p>
+          <p>To use Vite and start building, you will first have to:</p>
+          <ol>
+            <li>
+              <a href="https://nodejs.org/">Download and install Node.js</a>
+              <div class="text-muted">
+                Prefer the LTS version just to make sure there won't be any
+                incompatibilities
+              </div>
+            </li>
+            <li>
+              Create your project folder and copy over the source code you will
+              find in the package. Afterwards, install all required dependencies
+              in your project’s folder by running the following command in your
+              system’s console
+              <em>(you will have to run it from your project’s root folder)</em
+              >:<br />
+              <code>npm install</code>
+            </li>
+          </ol>
+          <p>
+            After you’ve successfully completed the previous steps, you will be
+            able to run the following commands in your system’s console from
+            your project’s root folder and start building:
+          </p>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th class="w-25">Command</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>npm run dev</code>
+                </td>
+                <td>
+                  <p class="mb-0">Compiles and hot-reloads for development</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>npm run build</code>
+                </td>
+                <td>
+                  <p class="mb-0">Compiles and minifies for production</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>npm run lint</code>
+                </td>
+                <td>
+                  <p class="mb-0">Lints and fixes files</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- END Vite -->
+
+          <!-- Getting Started -->
+          <h2 id="section-getting-started">Getting Started</h2>
+          <p>
+            Let us guide you through the vital folders and files you should
+            focus first to start building your Vue.js based app.
+          </p>
+          <table class="table table-bordered push">
+            <thead class="thead-light">
+              <tr>
+                <th style="width: 230px">File</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-folder mr-1"></i>
+                  <code>public/</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    In this folder you can place your static assets, eg your
+                    logo or custom fonts.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-folder mr-1"></i>
+                  <code>index.html</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    The main .html file where all build files will be auto
+                    injected (Vue.js version).
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/main.js</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    This is the entry point of your app. This is where all vital
+                    libraries are added (Vue.js/Pinia/Vue Router), global
+                    plugins/components/directives are registered and the app is
+                    mounted. This is also where you can include the
+                    <code>router/starter.js</code> instead of the default one to
+                    get a clean starting point for your app.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/App.vue</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    This is the main .vue file where all required styles for our
+                    app are included, the main.scss file along with all
+                    available color themes. It is recommended to comment out the
+                    color themes you won’t use to minimize your CSS file size.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/store/template.js</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    In this file, our Pinia store can be found. This is where
+                    you can set various layout options, a default color theme or
+                    change other options which are available in all your
+                    components. For some options, you might want to set them
+                    afterwards in each layout variation file under
+                    <code>src/layouts/variations/</code> folder based on your
+                    preferences and in the same way we already present.
+                    <a href="https://pinia.vuejs.org/">Pinia</a> is a state
+                    management pattern and library for Vue.js. It serves as a
+                    centralized store for all the components in an application,
+                    with rules ensuring that the state can only be mutated in a
+                    predictable fashion.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/router/index.js</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    This is where all our routes are specified. The layout
+                    variation that will be used for each view or a subset of
+                    views is set in here as well.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/views/*</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    All page views can be found in here. This is the place where
+                    you can add your own or alter existing ones.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/layouts/partials/*</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    This is where you can change the content of the common
+                    sections (sidebar, side overlay, header and footer). Each
+                    section has its own file which you can alter to match your
+                    preferences. For more info regarding layout, be sure to have
+                    a look at the
+                    <a
+                      href="#section-html"
+                      data-toggle="scroll-to"
+                      data-offset="50"
+                      >next section</a
+                    >
+                    as well. The main navigation is auto created in
+                    <code>src/layouts/partials/Sidebar.vue</code> from the array
+                    found in <code>src/data/menu.js</code> by default. To alter
+                    the menu, you can change this array accordingly or 'feed'
+                    the <code>&lt;BaseNavigation&gt;</code> component with a
+                    custom navigation array similar to the one we already
+                    provide.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- END Getting Started -->
+
+          <!-- HTML -->
+          <h2 id="section-html">HTML</h2>
+          <p>
+            <strong>OneUI Vue Edition</strong> features a super flexible, smart
+            and powerful layout which can be used to create dashboard and
+            website pages with minimum effort using the same resources.
+          </p>
+          <p>
+            The layout offers many options which can be enabled just by adding
+            or removing a class in the
+            <code>#page-container</code> element. We’ve already set up
+            everything for you though, so you can easily change the available
+            layout options through the Pinia store found in
+            <code>src/store/index.js</code>.
+          </p>
+          <p>
+            Layout partials and variations are created for reusable and
+            customizable layouts:
+          </p>
+          <table class="table table-bordered push">
+            <thead class="thead-light">
+              <tr>
+                <th style="width: 260px">Files</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/layouts/BaseLayout.vue</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    All base layout elements and available slots are added in
+                    this folder. Moreover, all vital layout classes are
+                    accodringly set to the
+                    <code>#page-container</code> element based on the default
+                    Pinia store values.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/layouts/variations/*</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    This is where you can create layout variations for your
+                    pages which extend
+                    <code>BaseLayout.vue</code> layout. By default we are
+                    including various examples with 3 of them being the main
+                    layout variations. <code>Simple.vue</code> does not include
+                    any partials (sidebar, side overlay, header and footer) and
+                    can be used for login or landing pages. The
+                    <code>Backend.vue</code> variation includes all partials by
+                    default and it is the one used for all backend pages. The
+                    <code>BackendBoxed.vue</code> does not include sidebar and
+                    side overlay, uses the default footer but overrides the
+                    header content. You can set which layout each page will use
+                    in your
+                    <code>src/router/index.js</code>
+                    file. The <code>BackendStarter.vue</code> variation is based
+                    on the backend and showcases how you can easily override the
+                    content of the partials (it is used for the starter router
+                    <code>src/router/starter.js</code> as an example).
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="far fa-fw fa-file-alt mr-1"></i>
+                  <code>src/layouts/partials/*</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    All partials (sidebar, side overlay, header and footer) can
+                    be found here.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Let’s have a quick look at the generic HTML structure and get
+            familiar with the layout approach:
+          </p>
+          <pre class="pre-sh"><code class="html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;!-- Title, Meta, Icons and Web Fonts --&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!-- Page Container --&gt;
+  &lt;div id=&quot;page-container&quot;&gt;    
+    &lt;!-- Page loader --&gt;
+    &lt;div id=&quot;page-loader&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Side Overlay--&gt;
+    &lt;div id=&quot;side-overlay&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;!-- END Side Overlay --&gt;
+
+    &lt;!-- Sidebar --&gt;
+    &lt;div id=&quot;sidebar&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;!-- END Sidebar --&gt;
+
+    &lt;!-- Header --&gt;
+    &lt;header id=&quot;page-header&quot;&gt;
+        ...
+    &lt;/header&gt;
+    &lt;!-- END Header --&gt;
+
+    &lt;!-- Main Container --&gt;
+    &lt;main id=&quot;main-container&quot;&gt;
+        ...
+    &lt;/main&gt;
+    &lt;!-- END Main Container --&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer id=&quot;page-footer&quot;&gt;
+        ...
+    &lt;/footer&gt;
+    &lt;!-- END Footer --&gt;
+  &lt;/div&gt;
+  &lt;!-- END Page Container --&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+          <p></p>
+          <!-- END HTML -->
+
+          <!-- Sass -->
+          <h2 id="section-sass">Sass</h2>
+          <p>
+            <strong>OneUI Vue Edition</strong> was built with
+            <a href="http://sass-lang.com/">Sass</a> using the latest
+            <code>SCSS</code> syntax. It is a powerful CSS pre-processor which
+            extends the CSS language, adding features that allow variables,
+            mixins, functions and many other techniques, enabling you to make
+            CSS that is more maintainable and extendable.
+          </p>
+          <p>
+            If you would like to extend the framework and add your own styles or
+            UI components, feel free to use the Sass files included in the
+            source code under <code>src/assets/scss/*</code> folder. When you
+            serve your project through
+            <a href="#section-vite" data-toggle="scroll-to" data-offset="50"
+              >Vite </a
+            >, you will instantly see live all the changes you make.
+          </p>
+          <p>
+            It is highly recommended though, to use the custom files we created
+            for you to add your own styles and make the
+            <a href="#section-updating" data-toggle="scroll-to" data-offset="50"
+              >updating</a
+            >
+            process easier. They can be found in
+            <code>src/assets/scss/custom/</code>. In
+            <code>src/assets/scss/custom/_variables.scss</code> you will be able
+            to override any variables you want and in
+            <code>src/assets/scss/custom/_main.scss</code> you will be able to
+            add your own styles or override current ones.
+          </p>
+          <p>Let’s have a better look at the Sass files structure:</p>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th class="w-25">Files</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-folder mr-1"></i>
+                    <code>oneui/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Includes all OneUI Sass files which follow the structure
+                      Bootstrap uses. All Bootstrap overrides can also be found
+                      in here (variables/mixins/functions/styles). We basically
+                      override what we can (using the available Bootstrap
+                      variables) or want (functions/mixins) to match our needs.
+                      Then we override the styles we can’t alter with variables
+                      and add our own components. This method allows us to
+                      easily update Bootstrap, resuse its features in our styles
+                      and also export a smaller main CSS file with fewer style
+                      overrides.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-folder mr-1"></i>
+                    <code>vendor/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Includes all third party styles (eg animation.css,
+                      fontawesome icons, simple line icons). In here, you will
+                      also find all style overrides for the integrated Vue.js
+                      plugins we showcase which are not included in the main
+                      stylesheet but in each .vue file where the plugin is used.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-folder mr-1"></i>
+                    <code>custom/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      This is your own folder in which you can add your own
+                      styles or overrides. Making your own changes in here will
+                      enable you to just update all other folders (when an
+                      update becomes available) without worrying of erasing your
+                      changes.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-file-alt mr-1"></i>
+                    <code>main.scss</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      This is the file where everything comes together. From
+                      here you could easily update the compiled CSS file by
+                      commenting out the components you won’t use in your
+                      project. This way, you can achieve the smallest possible
+                      footprint for your main CSS file by only including what
+                      you need.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="alert alert-warning">
+            <strong>OneUI Vue Edition</strong> uses the Sass styles from the
+            <strong>OneUI 5.x</strong> version. Please have in mind though, that
+            not all styles are directly interchangeable between those two
+            versions because various changes are applied to both color themes,
+            vendor styles and a few variables.
+          </p>
+          <!-- END Sass -->
+
+          <!-- Directives -->
+          <h2 id="section-directives">Directives</h2>
+          <p>
+            Directives are actually HTML attributes that can be added to your
+            HTML elements or components to init custom functionality. They all
+            start with <code>v-</code> to indicate that they are a special
+            Vue.js attributes. We created the following directive which is
+            included and registered globally, meaning that you can use it out of
+            the box in all your components. Directives are created in the
+            <code>src/directives/</code> folder.
+          </p>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th class="w-50">Usage (attribute)</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-body-light">
+                  <td colspan="2">
+                    <i class="far fa-fw fa-file-alt mr-1"></i>
+                    <code>clickRipple.js</code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>v-click-ripple</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      You can add the attribute to your buttons if you would
+                      like an animated ripple to appear on click. Inspired by
+                      material design.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- END Directives -->
+
+          <!-- Components -->
+          <h2 id="section-components">Components</h2>
+          <p>
+            Components are reusable Vue instances with a name. We created a few
+            vital ones to assist you even further when setting up your pages.
+            Our custom components are created in the
+            <code>src/components/</code> folder and start with
+            <code>Base</code> name. They are all globally registered in
+            <code>main.js</code> (except <code>BasePageHeading.vue</code>), so
+            you can use them in all pages out of the box. Let’s have a better
+            look into them:
+          </p>
+
+          <h3>
+            <code><i class="fa fa-file-alt"></i> BaseBackground.vue</code>
+          </h3>
+          <p class="mb-2">
+            Renders a div with the specified image as its background and an
+            inner div with a class (for color overlays), useful for creating
+            sections in landing pages or dashboard headings. For example:
+          </p>
+          <pre
+            class="pre-sh"
+          ><code class="html">&lt;BaseBackground image=&quot;url/to/image&quot; inner-class=&quot;bg-black-50&quot;&gt;
+  ... Your Content ...
+&lt;/BaseBackground&gt;</code></pre>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 200px">Properties</th>
+                  <th style="width: 120px">Type</th>
+                  <th style="width: 100px">Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>image</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">The url of the image to show</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>inner-class</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">
+                      The class of the inner div. Usually a background color
+                      with opacity class
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>image-top</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Align the image background to the top</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>image-bottom</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Align the image background to the bottom</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>image-fixed</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Set the background to fixed for a parallax effect
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>
+            <code><i class="fa fa-file-alt"></i> BaseBlock.vue</code>
+          </h3>
+          <p class="mb-2">
+            Renders one of the most vital elements of the template. You would
+            usually use blocks to structure your content in most backend pages.
+            For example:
+          </p>
+          <pre
+            class="pre-sh"
+          ><code class="html">&lt;BaseBlock title=&quot;Block Title&quot;&gt;
+  &lt;p&gt;
+    ...Your content...
+  &lt;/p&gt;
+&lt;/BaseBlock&gt;</code></pre>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 200px">Properties</th>
+                  <th style="width: 120px">Type</th>
+                  <th style="width: 100px">Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>tag</code>
+                  </td>
+                  <td>String</td>
+                  <td>
+                    <code>div</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">The HTML tag of the component (div, a)</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>title</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">The title of the block</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>subtitle</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">The subtitle of the block</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>bordered</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Bordered block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>rounded</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>true</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Rounded block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>themed</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Themed block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>transparent</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Transparent block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>fx-shadow</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Shadow fx block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>fx-pop</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Pop fx block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>fx-rotate-right</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Rotate right fx block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>fx-rotate-left</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Rotate left fx block style</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>link-shadow</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Shadow style for block links</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>link-pop</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Pop style for block links</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>link-rotate</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Rotate style for block links</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>header-class</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">
+                      Add additional classes to default block-header
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>options-class</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">
+                      Add additional classes to default block-options
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>content-class</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">
+                      Add additional classes to default block-content
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>footer-class</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">
+                      Add additional classes to default block's footer container
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>header-bg</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>true</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Add the default header background</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>header-rtl</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Reverse the order of elements in header</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>content-full</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Add full padding to the bottom of the default
+                      block-content
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>ribbon</code>
+                  </td>
+                  <td>[Boolean, String]</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Enable the ribbon or enable it and also specify its
+                      content by setting a string value.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>ribbon-left</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Position ribbon to the left</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>ribbon-bottom</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Position ribbon to the bottom</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>ribbon-bookmark</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Set the bookmark type to your ribbon</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>ribbon-modern</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Set the modern type to your ribbon</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>ribbon-variant</code>
+                  </td>
+                  <td>String</td>
+                  <td>
+                    <code>primary</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Set a different ribbon variant (primary, info, warning,
+                      danger, success, glass)
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>mode-loading</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Loading block mode</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>mode-fullscreen</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Fullscreen block mode</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>mode-pinned</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Pinned block mode</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>mode-content-hide</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Hide block’s content</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>mode-hide</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Hide block itself</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>btn-option-fullscreen</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Enable the fullscreen mode button</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>btn-option-pinned</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Enable the pinned mode button</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>btn-option-content</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Enable the content toggle button</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>btn-option-close</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Enable the close mode button</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 200px">Slot Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>header</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering the whole header section in your
+                      block
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>title</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering the title content in your block
+                      header
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>subtitle</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering the subtitle content in your block
+                      header
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>options</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering the options content in your block
+                      header
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>ribbon</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering the ribbon content (if ribbon is
+                      enabled)
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>content</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering additional content in your block
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>footer</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering the footer content in your block
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            You can also set ref properties to your
+            <code>BaseBlock</code> elements and access their methods as
+            required. Examples can be found in the Block API page.
+          </p>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 200px">Method</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>fullscreenToggle()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Toggles fullscreen mode</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>fullscreenOn()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Sets fullscreen mode to on</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>fullscreenOff()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Sets fullscreen mode to off</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>pinnedToggle()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Toggles pinned mode</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>pinnedOn()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Sets pinned mode to on</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>pinnedOff()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Sets pinned mode to off</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>contentToggle()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Toggles block’s content visibility</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>contentShow()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Makes block’s content visible</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>contentHide()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Hides block’s content</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>statusToggle()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Toggles block’s status</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>statusLoading()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Sets block’s status to loading</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>statusNormal()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Sets block’s status to normal</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>open()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Makes block itself visible</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>close()</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Hides block itself</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>
+            <code><i class="fa fa-file-alt"></i> BaseNavigation.vue</code>
+          </h3>
+          <p class="mb-2">
+            Renders the main navigation element based on a given array of
+            objects and needs to be imported in your view to use it. Includes
+            functionality for handling custom features such as dropdown
+            toggling, setting active submenus/links, rendering multiple levels
+            or hiding the sidebar on each link click if we are on small screens
+            (<code>to</code> needs to be set to the name of a route, not its
+            path). For example:
+          </p>
+          <pre
+            class="pre-sh"
+          ><code class="html">&lt;BaseNavigation :nodes=&quot;navigation&quot;&gt;&lt;/BaseNavigation&gt;</code></pre>
+          <pre class="pre-sh"><code class="javascript">let navigation = [
+  {
+    name: &apos;Dashboard&apos;,
+    to: &apos;backend-dashboard&apos;,
+    icon: &apos;si si-speedometer&apos;
+  },
+  {
+    name: &apos;User Interface&apos;,
+    heading: true
+  },
+  {
+    name: &apos;Blocks&apos;,
+    icon: &apos;si si-energy&apos;,
+    subActivePaths: &apos;/backend/blocks&apos;,
+    sub: [
+      {
+        name: &apos;Styles&apos;,
+        to: &apos;backend-blocks-styles&apos;
+      },
+      {
+        name: &apos;Options&apos;,
+        to: &apos;backend-blocks-options&apos;
+      },
+      {
+        name: &apos;Forms&apos;,
+        to: &apos;backend-blocks-forms&apos;
+      },
+      {
+        name: &apos;Themed&apos;,
+        to: &apos;backend-blocks-themed&apos;
+      },
+      {
+        name: &apos;API&apos;,
+        to: &apos;backend-blocks-api&apos;
+      }
+    ]
+  }
+]</code></pre>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 200px">Properties</th>
+                  <th style="width: 120px">Type</th>
+                  <th style="width: 100px">Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>nodes</code>
+                  </td>
+                  <td>Array</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">The nodes of the navigation</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>sub-menu</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      If true, a submenu will be rendered (used when recursively
+                      creating the menu)
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>dark</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Dark mode for menu</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>horizontal</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Horizontal menu in large screen width</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>horizontal-hover</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Hover mode for horizontal menu</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>horizontal-center</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Center mode for horizontal menu</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>horizontal-justify</code>
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">Justify mode for horizontal menu</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>
+            <code><i class="fa fa-file-alt"></i> BasePageHeading.vue</code>
+          </h3>
+          <p class="mb-2">
+            Renders a dashboard page heading with a Title and a subtitle along
+            with an extra section to the right, usually for adding an action
+            button or a breadcrumb. For example:
+          </p>
+          <pre
+            class="pre-sh"
+          ><code class="html">&lt;BasePageHeading title=&quot;Title&quot; subtitle=&quot;Your Subtitle&quot;&gt;
+  &lt;template #extra&gt;
+    &lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+      &lt;ol class=&quot;breadcrumb breadcrumb-alt&quot;&gt;
+        &lt;li class=&quot;breadcrumb-item&quot;&gt;
+          &lt;a class=&quot;link-fx&quot; href=&quot;javascript:void(0)&quot;&gt;Generic&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Blank&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/nav&gt;
+  &lt;/template&gt;
+&lt;/BasePageHeading&gt;</code></pre>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 200px">Properties</th>
+                  <th style="width: 120px">Type</th>
+                  <th style="width: 100px">Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>title</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">The title of page heading section</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>subtitle</code>
+                  </td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>
+                    <p class="mb-0">The subtitle of page heading section</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 200px">Slot Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>extra</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      For custom rendering the right content of the page heading
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- END Components -->
+
+          <!-- Plugins -->
+          <h2 id="section-plugins">Plugins</h2>
+          <p>
+            Various plugins are showcased in <code>OneUI Vue Edition</code>.
+            These are either pure Vue.js plugins or Vue.js wrappers of popular
+            JavaScript libraries. It is very straightforward to use them in your
+            page views. You will just have to import them along with their CSS
+            styles (if any) and afterwards add them in your templates by using
+            the components they provide.
+          </p>
+          <p>
+            In each example plugin page, we include inline comments along with
+            the required files you have to add as well as links to their online
+            repository where you can find their documentation. For some of them,
+            custom style overrides are also included after their default ones to
+            alter the look and feel and make them compatible with the included
+            color themes.
+          </p>
+          <p>
+            You can remove any dependency from your project by running
+            <code>npm remove module-name</code> from your system’s console. In a
+            similar way, you can install any new plugin/library/tool by using
+            <code>npm install module-name</code>.
+          </p>
+          <!-- END Plugins -->
+
+          <!-- Quick Tips -->
+          <h2 id="section-tips">Quick Tips</h2>
+
+          <h3>CSS prefixes for older browsers</h3>
+          <p>
+            You can update the following array in
+            <code>package.json</code> accordingly if you would like the
+            Autoprexifer to auto add CSS prefixes for older browser versions. By
+            default, the following are used based on Bootstrap's default
+            preferences:
+          </p>
+          <pre class="pre-sh"><code class="javascript">"browserslist": [
+  "&gt;= 0.5%",
+  "last 2 major versions",
+  "not dead",
+  "Chrome &gt;= 60",
+  "Firefox &gt;= 60",
+  "Firefox ESR",
+  "iOS &gt;= 12",
+  "Safari &gt;= 12",
+  "not Explorer &lt;= 11"
+]</code></pre>
+
+          <h3>High resolution screens</h3>
+          <p>
+            The UI will look crispy clear on high resolution screens and if you
+            would like your images to look great, too, then you will have to use
+            the <code>srcset</code> attribute of the
+            <code>&lt;img&gt;</code> element. For example, if you have an image
+            <code>url/to/image.jpg</code> and its high resolution version
+            <code>url/to/image@2x.jpg</code>, you will have to use the following
+            markup:
+          </p>
+          <pre
+            class="pre-sh"
+          ><code class="html">&lt;img src="url/to/image.jpg" srcset="url/to/image@2x.jpg 2x" alt="Image Description"&gt;</code></pre>
+          <p>
+            The browser will auto select the best version and load it
+            accordingly. Older browsers will ignore the
+            <code>srcset</code> attribute and will load the regular image as
+            usual.
+          </p>
+
+          <h3>Favicons</h3>
+          <p>
+            If you would like to auto create your favicons from your image/logo,
+            you can use the free service over at
+            <a href="http://realfavicongenerator.net"
+              >http://realfavicongenerator.net</a
+            >
+          </p>
+          <!-- END Quick Tips -->
+
+          <!-- Credits -->
+          <h2 id="section-credits">Credits</h2>
+          <p>
+            We’ve used the following resources as listed. Special thanks to all
+            the authors for their hard work!
+          </p>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Tooling</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://vitejs.dev/">Vite</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Frameworks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://vuejs.org/">Vue.js</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="http://getbootstrap.com/">Bootstrap</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Photos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-w600">
+                  MyPhotoPack (it was a project by pixelcave)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://unsplash.com/">Unsplash</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Icons</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://fontawesome.com/">Font Awesome 7</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/thesabbir/simple-line-icons"
+                    >Simple Line Icons</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-left">Libraries/Scripts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://github.com/fengyuanchen/vue-countdown"
+                    >@chenfengyuan/vue-countdown</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/ckeditor/ckeditor5-vue"
+                    >@ckeditor/ckeditor5-vue</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/ckpack/vue-color"
+                    >@ckpack/vue-color</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/fullcalendar/fullcalendar-vue"
+                    >@fullcalendar/vue3</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/highlightjs/vue-plugin"
+                    >@highlightjs/vue-plugin</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/floating-ui/floating-ui/tree/v2.x"
+                    >@popperjs/core</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/ueberdosis/tiptap"
+                    >@tiptap/vue-3</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/vueform/slider"
+                    >@vueform/slider</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/vuelidate/vuelidate"
+                    >@vuelidate</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/dropzone/dropzone">dropzone</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/rstacruz/nprogress">nprogress</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/vuejs/pinia">pinia</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/Grsmto/simplebar">simplebar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/sweetalert2/sweetalert2"
+                    >sweetalert2</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/apertureless/vue-chartjs"
+                    >vue-chartjs</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/Agontuk/vue-cropperjs"
+                    >vue-cropperjs</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/kouts/vue-dataset">vue-dataset</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/XiongAmao/vue-easy-lightbox"
+                    >vue-easy-lightbox</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/ankurk91/vue-flatpickr-component"
+                    >vue-flatpickr-component</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/vuejs/router">vue-router</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/sagalbot/vue-select"
+                    >vue-select</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/craigh411/vue-star-rating"
+                    >vue-star-rating</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- END Credits -->
+
+          <!-- Thank You -->
+          <h2 id="section-thankyou">Thank You!</h2>
+          <p>
+            Thank you so much for supporting our work by choosing one of our
+            products! We wish you all the best with your upcoming projects and
+            endeavors in life! If you would like to check out more of our work,
+            be sure to visit <a href="https://pixelcave.com">our website</a>.
+          </p>
+          <p>
+            <strong>Have a great day and happy coding!</strong>
+          </p>
+          <!-- END Thank You -->
+        </div>
+        <!-- END Page Content -->
+
+        <!-- Pixelcave Logo -->
+        <div class="overflow-hidden py-6 bg-body-light text-center">
+          <img
+            class="img-fluid invisible"
+            src="assets/media/favicon.png"
+            alt="pixelcave logo"
+            width="64"
+            height="64"
+            data-toggle="appear"
+            data-class="animated fadeInDown"
+          />
+        </div>
+        <!-- END Pixelcave Logo -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer">
+        <div
+          class="content content-full font-size-sm d-flex flex-column flex-sm-row justify-content-sm-between text-center text-sm-left"
+        >
+          <div class="py-2 py-sm-0">
+            <strong>Docs</strong> &copy; <span data-toggle="year-copy"></span>
+          </div>
+          <div class="py-2 py-sm-0">
+            Crafted with <i class="fa fa-heart text-danger"></i> by
+            <a class="font-w600" href="https://pixelcave.com">pixelcave</a>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!-- Docs JS -->
+    <script src="assets/js/docs.min.js"></script>
+  </body>
+</html>

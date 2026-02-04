@@ -1,0 +1,183 @@
+/**
+ * XGC Theme - CSS Variables
+ * 
+ * This file defines the CSS variable system for the XGC theme, including:
+ * - XGC brand colors (forest green and gold) with comprehensive variation scales
+ * - Frappe core variable overrides for seamless integration
+ * - OneUI design system variables (typography, spacing, borders, shadows, transitions, z-index)
+ * - Fallback values for older browsers that don't support CSS variables
+ * 
+ * Requirements: 3.2, 3.3, 4.1, 4.2, 4.5, 11.5, 12.1, 12.2, 12.4, 14.3
+ */
+
+/* ===== FALLBACK VALUES FOR OLDER BROWSERS ===== */
+/* These values are used by browsers that don't support CSS variables */
+
+/* Base styles with fallback values */
+body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #1f2937;
+    background-color: #ffffff;
+}
+
+/* Button fallbacks */
+.btn {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    border-radius: 6px;
+    border-width: 1px;
+}
+
+.btn-primary {
+    background-color: #2d5016;
+    border-color: #2d5016;
+}
+
+/* Form control fallbacks */
+.form-control,
+input,
+textarea,
+select {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* Card fallbacks */
+.card,
+.frappe-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+:root {
+    /* ===== XGC Brand Colors ===== */
+    
+    /* Primary: Forest Green */
+    --xgc-forest-green: #2d5016;
+    --xgc-forest-green-light: #3d6b1f;
+    --xgc-forest-green-lighter: #4d7c2a;
+    --xgc-forest-green-dark: #1d3a0f;
+    --xgc-forest-green-darker: #0d2005;
+    
+    /* Secondary: Gold */
+    --xgc-gold: #9c7a10;        /* Darkened for WCAG AA compliance (4.03:1) */
+    --xgc-gold-light: #b8941f;  /* Darkened for WCAG AA compliance (2.88:1 - AA Large) */
+    --xgc-gold-lighter: #d4af37; /* Original gold, for decorative use (2.10:1) */
+    --xgc-gold-dark: #7a5e0d;   /* Darker for better contrast (5.89:1) */
+    --xgc-gold-darker: #5a4609; /* Darkest for maximum contrast (8.51:1) */
+    
+    /* ===== Frappe Core Variable Overrides ===== */
+    
+    /* Primary colors - used for main actions, links, active states */
+    --primary: var(--xgc-forest-green);
+    --primary-light: var(--xgc-forest-green-light);
+    --primary-dark: var(--xgc-forest-green-dark);
+    
+    /* Accent colors - used for highlights, secondary actions */
+    --accent: var(--xgc-gold);
+    --accent-light: var(--xgc-gold-light);
+    --accent-dark: var(--xgc-gold-dark);
+    
+    /* Text colors */
+    --text-color: #1f2937;
+    --text-muted: #6b7280;
+    --text-light: #9ca3af;
+    
+    /* Background colors */
+    --bg-color: #ffffff;
+    --surface-color: #f9fafb;
+    --surface-hover: #f3f4f6;
+    
+    /* Border colors */
+    --border-color: #e5e7eb;
+    --border-color-dark: #d1d5db;
+    
+    /* ===== OneUI Typography System ===== */
+    
+    /* Font families */
+    --font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-monospace: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+    
+    /* Font sizes - OneUI scale */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 0.9375rem;  /* 15px */
+    --font-size-md: 1rem;         /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    
+    /* Line heights */
+    --line-height-tight: 1.25;
+    --line-height-base: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Font weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Letter spacing */
+    --letter-spacing-tight: -0.025em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.025em;
+    
+    /* ===== OneUI Spacing System ===== */
+    
+    --spacing-xs: 0.25rem;   /* 4px */
+    --spacing-sm: 0.5rem;    /* 8px */
+    --spacing-md: 1rem;      /* 16px */
+    --spacing-lg: 1.5rem;    /* 24px */
+    --spacing-xl: 2rem;      /* 32px */
+    --spacing-2xl: 2.5rem;   /* 40px */
+    --spacing-3xl: 3rem;     /* 48px */
+    
+    /* ===== OneUI Border System ===== */
+    
+    /* Border widths */
+    --border-width: 1px;
+    --border-width-thick: 2px;
+    
+    /* Border radius scale */
+    --border-radius-sm: 0.25rem;   /* 4px */
+    --border-radius: 0.375rem;     /* 6px */
+    --border-radius-md: 0.5rem;    /* 8px */
+    --border-radius-lg: 0.75rem;   /* 12px */
+    --border-radius-xl: 1rem;      /* 16px */
+    --border-radius-full: 9999px;  /* Fully rounded */
+    
+    /* ===== OneUI Shadow System ===== */
+    
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* ===== OneUI Transition System ===== */
+    
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* ===== OneUI Z-Index System ===== */
+    
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}

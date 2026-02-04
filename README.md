@@ -2,6 +2,11 @@
 
 XGC ONEUI
 
+## ONEUI source files
+xgc_theme/xgc_theme/OneUI/README.md
+
+Frappe theme app creation /Users/dzb/Dev/GitHub/xgc_theme/frappe-theme.md
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
@@ -29,5 +34,4 @@ Pre-commit is configured to use the following tools for checking and formatting 
 - pyupgrade
 
 ### License
-
-mit
+Private XGC CORP.

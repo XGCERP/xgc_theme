@@ -1,9 +1,17 @@
 app_name = "xgc_theme"
-app_title = "XGC Theme App"
-app_publisher = "XGC Software Inc"
-app_description = "XGC ONEUI"
+app_title = "XGC Theme"
+app_publisher = "XGC"
+app_description = "OneUI-based theme for Frappe/ERPNext"
 app_email = "support@xgccorp.com"
 app_license = "mit"
+app_version = "0.0.1"
+
+# Website Settings
+# ----------------
+website_context = {
+    "favicon": "/assets/xgc_theme/media/favicons/favicon.ico",
+    "splash_image": "/assets/xgc_theme/media/logo/xgc-carbon-logo-sq.webp"
+}
 
 # Apps
 # ------------------
@@ -25,12 +33,38 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/xgc_theme/css/xgc_theme.css"
-# app_include_js = "/assets/xgc_theme/js/xgc_theme.js"
+app_include_css = [
+    "/assets/xgc_theme/css/xgc_variables.css",
+    "/assets/xgc_theme/css/xgc_components.css",
+    "/assets/xgc_theme/css/xgc_desk.css"
+]
+
+app_include_js = [
+    "/assets/xgc_theme/js/xgc_theme.js"
+]
 
 # include js, css files in header of web template
-# web_include_css = "/assets/xgc_theme/css/xgc_theme.css"
-# web_include_js = "/assets/xgc_theme/js/xgc_theme.js"
+web_include_css = [
+    "/assets/xgc_theme/css/xgc_variables.css",
+    "/assets/xgc_theme/css/xgc_components.css",
+    "/assets/xgc_theme/css/xgc_website.css"
+]
+
+web_include_js = [
+    "/assets/xgc_theme/js/xgc_theme.js"
+]
+
+# Theme variants
+themes = {
+    "XGC Light": {
+        "app_include_css": app_include_css,
+        "web_include_css": web_include_css
+    },
+    "XGC Dark": {
+        "app_include_css": app_include_css + ["/assets/xgc_theme/css/xgc_dark.css"],
+        "web_include_css": web_include_css + ["/assets/xgc_theme/css/xgc_dark.css"]
+    }
+}
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "xgc_theme/public/scss/website"

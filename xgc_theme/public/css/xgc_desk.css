@@ -1,0 +1,391 @@
+/**
+ * XGC Theme - Desk Interface Styles
+ * OneUI 5.12 styling for Frappe Desk (admin interface)
+ * 
+ * This file applies theme styling to Desk-specific components including:
+ * - Sidebar navigation
+ * - Toolbar and page headers
+ * - Forms and form controls
+ * - Lists and grids
+ * - Dashboard widgets
+ * 
+ * Requirements: 6.1, 6.2, 6.3, 6.4, 6.5
+ */
+
+
+/* ===== DESK SIDEBAR NAVIGATION ===== */
+
+/* Sidebar Logo */
+.desk-sidebar .sidebar-logo {
+    padding: var(--spacing-lg);
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-md);
+}
+
+.desk-sidebar .sidebar-logo img {
+    max-width: 180px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Sidebar Container */
+.desk-sidebar {
+    background-color: var(--xgc-forest-green-dark);
+    border-right: var(--border-width) solid var(--xgc-forest-green);
+    box-shadow: var(--shadow-md);
+}
+
+/* Sidebar Items */
+.desk-sidebar .sidebar-item,
+.desk-sidebar .standard-sidebar-item {
+    color: rgba(255, 255, 255, 0.8);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    -webkit-transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                transform var(--transition-fast);
+    -moz-transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                transform var(--transition-fast);
+    -o-transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                transform var(--transition-fast);
+    transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                transform var(--transition-fast);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+}
+
+.desk-sidebar .sidebar-item:hover,
+.desk-sidebar .standard-sidebar-item:hover {
+    background-color: var(--xgc-forest-green);
+    color: #ffffff;
+    -webkit-transform: translateX(2px);
+    -moz-transform: translateX(2px);
+    -ms-transform: translateX(2px);
+    -o-transform: translateX(2px);
+    transform: translateX(2px);
+}
+
+.desk-sidebar .sidebar-item.active,
+.desk-sidebar .standard-sidebar-item.selected {
+    background-color: var(--xgc-forest-green);
+    color: var(--xgc-gold);
+    font-weight: var(--font-weight-semibold);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Sidebar Item Icons */
+.desk-sidebar .sidebar-item .icon,
+.desk-sidebar .standard-sidebar-item .icon {
+    margin-right: var(--spacing-sm);
+    opacity: 0.9;
+    -webkit-transition: opacity var(--transition-fast);
+    -moz-transition: opacity var(--transition-fast);
+    -o-transition: opacity var(--transition-fast);
+    transition: opacity var(--transition-fast);
+}
+
+.desk-sidebar .sidebar-item:hover .icon,
+.desk-sidebar .standard-sidebar-item:hover .icon {
+    opacity: 1;
+}
+
+/* Sidebar Item Focus States */
+.desk-sidebar .sidebar-item:focus,
+.desk-sidebar .standard-sidebar-item:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+    background-color: var(--xgc-forest-green);
+    color: #ffffff;
+}
+
+/* Sidebar Section Headers */
+.desk-sidebar .sidebar-label,
+.desk-sidebar .standard-sidebar-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-xs);
+    margin-top: var(--spacing-md);
+}
+
+/* Sidebar Dividers */
+.desk-sidebar .sidebar-divider {
+    height: var(--border-width);
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: var(--spacing-md) var(--spacing-sm);
+}
+
+
+
+/* ===== DESK TOOLBAR AND PAGE HEADERS ===== */
+
+/* Page Head Container */
+.page-head {
+    background-color: #ffffff;
+    border-bottom: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Page Title */
+.page-title {
+    color: var(--xgc-forest-green);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-tight);
+    margin: 0;
+}
+
+/* Page Title with Icon */
+.page-title .icon {
+    color: var(--xgc-forest-green);
+    margin-right: var(--spacing-sm);
+}
+
+/* Page Actions Container */
+.page-head-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+/* Toolbar Buttons */
+.page-head .btn,
+.page-head .btn-group .btn {
+    border-radius: var(--border-radius);
+    -webkit-transition: all var(--transition-fast);
+    -moz-transition: all var(--transition-fast);
+    -o-transition: all var(--transition-fast);
+    transition: all var(--transition-fast);
+}
+
+.page-head .btn-primary {
+    background-color: var(--xgc-forest-green);
+    border-color: var(--xgc-forest-green);
+}
+
+.page-head .btn-primary:hover {
+    background-color: var(--xgc-forest-green-dark);
+    border-color: var(--xgc-forest-green-dark);
+    box-shadow: var(--shadow-md);
+}
+
+/* Page Breadcrumbs in Header */
+.page-head .breadcrumb {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Page Subtitle/Description */
+.page-head .page-sub-heading {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-xs);
+}
+
+/* Toolbar Separator */
+.page-head .vertical-bar {
+    width: var(--border-width);
+    height: 1.5rem;
+    background-color: var(--border-color);
+    margin: 0 var(--spacing-sm);
+}
+
+
+
+/* ===== DESK FORMS AND LISTS ===== */
+
+/* Frappe Control (Form Field Container) */
+.frappe-control {
+    margin-bottom: var(--spacing-md);
+}
+
+.frappe-control .control-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.frappe-control .control-input {
+    width: 100%;
+}
+
+.frappe-control .help-box {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    margin-top: var(--spacing-xs);
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.form-section .section-head {
+    color: var(--xgc-forest-green);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Form Layout */
+.form-layout {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+}
+
+/* Grid Row (List Item) */
+.grid-row,
+.list-row {
+    background-color: var(--bg-color);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    -webkit-transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                transform var(--transition-fast);
+    -moz-transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                transform var(--transition-fast);
+    -o-transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                transform var(--transition-fast);
+    transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                transform var(--transition-fast);
+    cursor: pointer;
+}
+
+.grid-row:hover,
+.list-row:hover {
+    background-color: rgba(45, 80, 22, 0.05);
+    border-color: var(--xgc-forest-green-light);
+    box-shadow: var(--shadow-sm);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+
+.grid-row.selected,
+.list-row.selected {
+    background-color: rgba(45, 80, 22, 0.1);
+    border-color: var(--xgc-forest-green);
+    box-shadow: var(--shadow-md);
+}
+
+/* Grid Heading Row */
+.grid-heading-row {
+    background-color: var(--surface-color);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    color: var(--text-color);
+}
+
+/* List View Container */
+.list-view {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+}
+
+/* List Filters */
+.list-filters {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+/* List Pagination */
+.list-paging-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    border-top: var(--border-width) solid var(--border-color);
+    margin-top: var(--spacing-md);
+}
+
+.list-paging-area .btn {
+    border-radius: var(--border-radius);
+}
+
+/* Form Grid (Child Table) */
+.form-grid {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+}
+
+.form-grid .grid-heading-row {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.form-grid .grid-row {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 0;
+}
+
+.form-grid .grid-row:last-child {
+    border-bottom: none;
+}
+
+/* Form Tabs */
+.form-tabs {
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-tabs .nav-link {
+    color: var(--text-muted);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    -webkit-transition: color var(--transition-fast),
+                background-color var(--transition-fast);
+    -moz-transition: color var(--transition-fast),
+                background-color var(--transition-fast);
+    -o-transition: color var(--transition-fast),
+                background-color var(--transition-fast);
+    transition: color var(--transition-fast),
+                background-color var(--transition-fast);
+}
+
+.form-tabs .nav-link:hover {
+    color: var(--xgc-forest-green);
+    background-color: var(--surface-hover);
+}
+
+.form-tabs .nav-link.active {
+    color: var(--xgc-forest-green);
+    font-weight: var(--font-weight-semibold);
+    border-bottom: 2px solid var(--xgc-forest-green);
+}
+

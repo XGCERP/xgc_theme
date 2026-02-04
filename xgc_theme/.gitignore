@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Test coverage
+coverage/
+
+# Jest cache
+.jest/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
