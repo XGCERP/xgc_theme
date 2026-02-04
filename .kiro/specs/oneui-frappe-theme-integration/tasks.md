@@ -420,14 +420,14 @@ This implementation plan breaks down the OneUI-Frappe theme integration into dis
     - Verify focus indicators are visible
     - _Requirements: 4.4_
 
-- [ ] 19. Performance testing
-  - [ ] 19.1 Measure page load performance
+- [x] 19. Performance testing
+  - [x] 19.1 Measure page load performance
     - Use Lighthouse or WebPageTest to measure page load time
     - Compare performance with default Frappe theme
     - Verify no significant degradation (>10% slower)
     - _Requirements: 13.1, 13.2, 13.3, 13.5_
 
-  - [ ] 19.2 Optimize CSS and JavaScript if needed
+  - [x] 19.2 Optimize CSS and JavaScript if needed
     - Minify CSS and JavaScript files
     - Remove unused CSS selectors
     - Optimize CSS specificity to reduce rendering time
