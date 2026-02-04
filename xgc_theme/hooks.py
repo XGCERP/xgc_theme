@@ -10,7 +10,8 @@ app_version = "0.0.1"
 # ----------------
 website_context = {
     "favicon": "/assets/xgc_theme/media/favicons/favicon.ico",
-    "splash_image": "/assets/xgc_theme/media/logo/xgc-carbon-logo-sq.webp"
+    "splash_image": "/assets/xgc_theme/media/logo/xgc-carbon-logo-sq.webp",
+    "banner_image": "/assets/xgc_theme/media/logo/xgc-carbon-gold-logo-sq.png"
 }
 
 # Apps
