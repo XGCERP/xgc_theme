@@ -1,0 +1,42 @@
+[
+  {
+    "doctype": "Website Theme",
+    "theme": "XGC Light",
+    "module": "Website",
+    "custom": 1,
+    "theme_url": "",
+    "js": "/assets/xgc_theme/js/xgc_theme.js",
+    "theme_scss": "",
+    "custom_scss": "@import 'xgc_variables';\n@import 'xgc_components';\n@import 'xgc_website';",
+    "ignored_apps": [],
+    "apply_style": 1,
+    "apply_text_styles": 1,
+    "font_properties": {
+      "font_size": "16px",
+      "heading_font": "Inter",
+      "text_font": "Inter"
+    },
+    "background_color": "#ffffff",
+    "text_color": "#1e293b"
+  },
+  {
+    "doctype": "Website Theme",
+    "theme": "XGC Dark",
+    "module": "Website",
+    "custom": 1,
+    "theme_url": "",
+    "js": "/assets/xgc_theme/js/xgc_theme.js",
+    "theme_scss": "",
+    "custom_scss": "@import 'xgc_variables';\n@import 'xgc_components';\n@import 'xgc_website';\n@import 'xgc_dark';",
+    "ignored_apps": [],
+    "apply_style": 1,
+    "apply_text_styles": 1,
+    "font_properties": {
+      "font_size": "16px",
+      "heading_font": "Inter",
+      "text_font": "Inter"
+    },
+    "background_color": "#0f172a",
+    "text_color": "#e2e8f0"
+  }
+]
