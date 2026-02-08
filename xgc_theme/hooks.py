@@ -133,8 +133,8 @@ fixtures = [
 # Installation
 # ------------
 
-# before_install = "xgc_theme.install.before_install"
-# after_install = "xgc_theme.install.after_install"
+before_install = "xgc_theme.install.before_install"
+after_install = "xgc_theme.install.after_install"
 
 # Uninstallation
 # ------------
