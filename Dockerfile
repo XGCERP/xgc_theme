@@ -1,21 +1,16 @@
-FROM frappe/erpnext:v15.latest
+FROM frappe/erpnext:v16.latest
 
-# Set working directory
+USER frappe
 WORKDIR /home/frappe/frappe-bench
 
-# Copy the theme app
+# Copy app source
 COPY --chown=frappe:frappe ./xgc_theme /home/frappe/frappe-bench/apps/xgc_theme
 
-# Switch to frappe user
-USER frappe
-
-# Install the theme app
-RUN cd /home/frappe/frappe-bench && \
-    bench get-app xgc_theme file:///home/frappe/frappe-bench/apps/xgc_theme && \
+# pip-install the package into the bench virtualenv so `import xgc_theme` works,
+# then build static assets
+RUN /home/frappe/frappe-bench/env/bin/pip install --no-deps -e apps/xgc_theme && \
     bench build --app xgc_theme
 
-# Expose ports
-EXPOSE 8000 9000 6787
+EXPOSE 8000 9000
 
-# Default command
 CMD ["bench", "start"]
