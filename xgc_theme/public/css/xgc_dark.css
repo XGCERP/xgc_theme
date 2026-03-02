@@ -8,7 +8,7 @@
  */
 
 /* ===== Dark Theme Variable Overrides ===== */
-[data-theme="dark"], .dark-mode {
+:root {
     /* ===== Background Colors ===== */
     --bg-color: #111827;           /* Very dark gray-blue */
     --surface-color: #1f2937;      /* Dark gray-blue */
@@ -70,259 +70,259 @@
 /* ===== Component Styling for Dark Mode ===== */
 
 /* ===== Cards and Surfaces ===== */
-[data-theme="dark"] .card,
-[data-theme="dark"] .frappe-card {
+.card,
+.frappe-card {
     background-color: var(--surface-color);
     border-color: var(--border-color);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .card:hover,
-[data-theme="dark"] .frappe-card:hover {
+.card:hover,
+.frappe-card:hover {
     background-color: var(--surface-hover);
     box-shadow: var(--shadow-lg);
 }
 
-[data-theme="dark"] .card-header {
+.card-header {
     background-color: var(--surface-elevated);
     border-bottom-color: var(--border-color);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .card-footer {
+.card-footer {
     background-color: var(--surface-elevated);
     border-top-color: var(--border-color);
 }
 
 /* ===== Form Controls ===== */
-[data-theme="dark"] .form-control,
-[data-theme="dark"] input[type="text"],
-[data-theme="dark"] input[type="email"],
-[data-theme="dark"] input[type="password"],
-[data-theme="dark"] input[type="number"],
-[data-theme="dark"] input[type="tel"],
-[data-theme="dark"] input[type="url"],
-[data-theme="dark"] input[type="search"],
-[data-theme="dark"] input[type="date"],
-[data-theme="dark"] input[type="time"],
-[data-theme="dark"] textarea,
-[data-theme="dark"] select {
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
     background-color: var(--surface-color);
     border-color: var(--border-color);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .form-control:hover,
-[data-theme="dark"] input:hover,
-[data-theme="dark"] textarea:hover,
-[data-theme="dark"] select:hover {
+.form-control:hover,
+input:hover,
+textarea:hover,
+select:hover {
     border-color: var(--border-color-dark);
 }
 
-[data-theme="dark"] .form-control:focus,
-[data-theme="dark"] input:focus,
-[data-theme="dark"] textarea:focus,
-[data-theme="dark"] select:focus {
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
     background-color: var(--surface-elevated);
     border-color: var(--xgc-forest-green);
     box-shadow: 0 0 0 0.2rem rgba(74, 124, 42, 0.25);
 }
 
-[data-theme="dark"] .form-control::placeholder,
-[data-theme="dark"] input::placeholder,
-[data-theme="dark"] textarea::placeholder {
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
     color: var(--text-light);
 }
 
-[data-theme="dark"] .form-control:disabled,
-[data-theme="dark"] input:disabled,
-[data-theme="dark"] textarea:disabled,
-[data-theme="dark"] select:disabled {
+.form-control:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
     background-color: var(--surface-elevated);
     color: var(--text-muted);
     opacity: 0.6;
 }
 
-[data-theme="dark"] .form-label,
-[data-theme="dark"] label {
+.form-label,
+label {
     color: var(--text-color);
 }
 
 /* ===== Buttons ===== */
-[data-theme="dark"] .btn-primary {
+.btn-primary {
     background-color: var(--xgc-forest-green);
     border-color: var(--xgc-forest-green);
     color: #ffffff;
 }
 
-[data-theme="dark"] .btn-primary:hover {
+.btn-primary:hover {
     background-color: var(--xgc-forest-green-light);
     border-color: var(--xgc-forest-green-light);
 }
 
-[data-theme="dark"] .btn-secondary {
+.btn-secondary {
     background-color: var(--surface-color);
     border-color: var(--border-color-dark);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .btn-secondary:hover {
+.btn-secondary:hover {
     background-color: var(--surface-hover);
     border-color: var(--border-color-dark);
 }
 
-[data-theme="dark"] .btn-success {
+.btn-success {
     background-color: #10b981;
     border-color: #10b981;
     color: #ffffff;
 }
 
-[data-theme="dark"] .btn-danger {
+.btn-danger {
     background-color: #ef4444;
     border-color: #ef4444;
     color: #ffffff;
 }
 
-[data-theme="dark"] .btn-warning {
+.btn-warning {
     background-color: var(--xgc-gold);
     border-color: var(--xgc-gold);
     color: #1f2937;
 }
 
 /* ===== Navigation ===== */
-[data-theme="dark"] .navbar {
+.navbar {
     background-color: var(--surface-color);
     border-color: var(--border-color);
 }
 
-[data-theme="dark"] .nav-link {
+.nav-link {
     color: var(--text-muted);
 }
 
-[data-theme="dark"] .nav-link:hover {
+.nav-link:hover {
     color: var(--xgc-gold);
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme="dark"] .nav-link.active {
+.nav-link.active {
     color: var(--xgc-gold);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-[data-theme="dark"] .breadcrumb-item {
+.breadcrumb-item {
     color: var(--text-muted);
 }
 
-[data-theme="dark"] .breadcrumb-item a {
+.breadcrumb-item a {
     color: var(--xgc-forest-green-light);
 }
 
-[data-theme="dark"] .breadcrumb-item a:hover {
+.breadcrumb-item a:hover {
     color: var(--xgc-forest-green-lighter);
 }
 
-[data-theme="dark"] .breadcrumb-item.active {
+.breadcrumb-item.active {
     color: var(--text-color);
 }
 
-[data-theme="dark"] .desk-sidebar {
+.desk-sidebar {
     background-color: var(--surface-color);
     border-color: var(--border-color);
 }
 
 /* ===== Tables and Lists ===== */
-[data-theme="dark"] .table {
+.table {
     background-color: var(--surface-color);
     border-color: var(--border-color);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .table thead {
+.table thead {
     background-color: var(--surface-elevated);
 }
 
-[data-theme="dark"] .table thead th {
+.table thead th {
     background-color: var(--surface-elevated);
     border-color: var(--border-color-dark);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .table tbody td {
+.table tbody td {
     border-color: var(--border-color);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .table tbody tr:hover {
+.table tbody tr:hover {
     background-color: var(--surface-hover);
 }
 
-[data-theme="dark"] .grid-row {
+.grid-row {
     background-color: var(--surface-color);
     border-color: var(--border-color);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .grid-row:hover {
+.grid-row:hover {
     background-color: var(--surface-hover);
 }
 
-[data-theme="dark"] .grid-heading-row {
+.grid-heading-row {
     background-color: var(--surface-elevated);
     border-color: var(--border-color-dark);
     color: var(--text-color);
 }
 
 /* ===== Modals and Overlays ===== */
-[data-theme="dark"] .modal-content {
+.modal-content {
     background-color: var(--surface-color);
     border-color: var(--border-color);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .modal-header {
+.modal-header {
     border-bottom-color: var(--border-color);
     background-color: var(--surface-elevated);
 }
 
-[data-theme="dark"] .modal-body {
+.modal-body {
     background-color: var(--surface-color);
 }
 
-[data-theme="dark"] .modal-footer {
+.modal-footer {
     border-top-color: var(--border-color);
     background-color: var(--surface-elevated);
 }
 
-[data-theme="dark"] .modal-backdrop {
+.modal-backdrop {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* ===== Alerts and Feedback ===== */
-[data-theme="dark"] .alert-success {
+.alert-success {
     background-color: var(--success-bg);
     color: var(--success-text);
     border-color: var(--success-text);
 }
 
-[data-theme="dark"] .alert-warning {
+.alert-warning {
     background-color: var(--warning-bg);
     color: var(--warning-text);
     border-color: var(--warning-text);
 }
 
-[data-theme="dark"] .alert-danger {
+.alert-danger {
     background-color: var(--danger-bg);
     color: var(--danger-text);
     border-color: var(--danger-text);
 }
 
-[data-theme="dark"] .alert-info {
+.alert-info {
     background-color: var(--info-bg);
     color: var(--info-text);
     border-color: var(--info-text);
 }
 
-[data-theme="dark"] .toast {
+.toast {
     background-color: var(--surface-color);
     border-color: var(--border-color);
     color: var(--text-color);
@@ -330,68 +330,68 @@
 }
 
 /* ===== Code Blocks ===== */
-[data-theme="dark"] code,
-[data-theme="dark"] pre {
+code,
+pre {
     background-color: var(--surface-elevated);
     color: var(--text-color);
     border-color: var(--border-color);
 }
 
 /* ===== Scrollbars (Webkit browsers) ===== */
-[data-theme="dark"] ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 12px;
     height: 12px;
 }
 
-[data-theme="dark"] ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: var(--surface-color);
 }
 
-[data-theme="dark"] ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--surface-hover);
     border-radius: var(--border-radius);
 }
 
-[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: var(--border-color-dark);
 }
 
 /* ===== Additional Dark Mode Adjustments ===== */
-[data-theme="dark"] .page-head {
+.page-head {
     background-color: var(--surface-color);
     border-bottom-color: var(--border-color);
 }
 
-[data-theme="dark"] .page-title {
+.page-title {
     color: var(--xgc-forest-green-light);
 }
 
-[data-theme="dark"] .web-header {
+.web-header {
     background-color: var(--surface-color);
     border-bottom-color: var(--border-color);
 }
 
-[data-theme="dark"] .web-header .navbar-brand {
+.web-header .navbar-brand {
     color: var(--xgc-forest-green-light);
 }
 
-[data-theme="dark"] .web-content h1,
-[data-theme="dark"] .web-content h2,
-[data-theme="dark"] .web-content h3,
-[data-theme="dark"] .web-content h4,
-[data-theme="dark"] .web-content h5,
-[data-theme="dark"] .web-content h6 {
+.web-content h1,
+.web-content h2,
+.web-content h3,
+.web-content h4,
+.web-content h5,
+.web-content h6 {
     color: var(--xgc-forest-green-light);
 }
 
-[data-theme="dark"] .web-content a {
+.web-content a {
     color: var(--xgc-forest-green-light);
 }
 
-[data-theme="dark"] .web-content a:hover {
+.web-content a:hover {
     color: var(--xgc-gold);
 }
 
-[data-theme="dark"] .frappe-control {
+.frappe-control {
     color: var(--text-color);
 }

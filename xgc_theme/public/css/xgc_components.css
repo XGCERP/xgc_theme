@@ -362,48 +362,7 @@ input.is-invalid:focus {
 
 /* ===== NAVIGATION COMPONENTS ===== */
 
-/* Navbar Base Styles */
-.navbar {
-    /* OneUI navbar foundation */
-    background-color: var(--xgc-forest-green);
-    box-shadow: var(--shadow-md);
-    padding: var(--spacing-md) var(--spacing-lg);
-    
-    /* Layout */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-md);
-}
-
-/* Nav Links */
-.nav-link {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-medium);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--border-radius);
-    -webkit-transition: color var(--transition-fast),
-                background-color var(--transition-fast);
-    -moz-transition: color var(--transition-fast),
-                background-color var(--transition-fast);
-    -o-transition: color var(--transition-fast),
-                background-color var(--transition-fast);
-    transition: color var(--transition-fast),
-                background-color var(--transition-fast);
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: var(--xgc-gold);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-link.active {
-    color: var(--xgc-gold);
-    background-color: rgba(255, 255, 255, 0.15);
-    font-weight: var(--font-weight-semibold);
-}
+/* Navbar and nav-link styles are in xgc_desk.css to avoid conflicts */
 
 /* Breadcrumbs */
 .breadcrumb {
