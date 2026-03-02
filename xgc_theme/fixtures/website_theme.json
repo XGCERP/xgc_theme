@@ -1,42 +1,26 @@
 [
   {
     "doctype": "Website Theme",
+    "name": "XGC Light",
     "theme": "XGC Light",
-    "module": "Website",
     "custom": 1,
-    "theme_url": "",
     "js": "/assets/xgc_theme/js/xgc_theme.js",
-    "theme_scss": "",
-    "custom_scss": "// XGC Brand Colors\n$xgc-primary: #2E7D32;\n$xgc-secondary: #1B5E20;\n$xgc-accent: #4CAF50;\n$xgc-success: #66BB6A;\n\n// Override Frappe variables\n$primary: $xgc-primary;\n$accent: $xgc-accent;",
-    "ignored_apps": [],
-    "apply_style": 1,
-    "apply_text_styles": 1,
-    "font_properties": {
-      "font_size": "16px",
-      "heading_font": "Inter",
-      "text_font": "Inter"
-    },
-    "background_color": "#ffffff",
-    "text_color": "#1e293b"
+    "google_font": "Inter",
+    "font_size": "16px",
+    "font_properties": "wght@300;400;500;600;700",
+    "custom_scss": "// XGC Brand Colors - Light Theme\n$primary: #2E7D32;\n$primary-light: #81C784;\n$primary-dark: #1B5E20;\n$accent: #4CAF50;\n\n// Typography\n$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n$font-size-base: 1rem;\n\n// Light surface colors\n$bg-color: #FFFFFF;\n$text-color: #1e293b;\n$border-color: #e2e8f0;",
+    "ignored_apps": []
   },
   {
     "doctype": "Website Theme",
+    "name": "XGC Dark",
     "theme": "XGC Dark",
-    "module": "Website",
     "custom": 1,
-    "theme_url": "",
     "js": "/assets/xgc_theme/js/xgc_theme.js",
-    "theme_scss": "",
-    "custom_scss": "// XGC Brand Colors (Dark Theme)\n$xgc-primary: #66BB6A;\n$xgc-secondary: #81C784;\n$xgc-accent: #4CAF50;\n$xgc-success: #66BB6A;\n\n// Override Frappe variables\n$primary: $xgc-primary;\n$accent: $xgc-accent;\n\n// Dark theme colors\n$bg-color: #121212;\n$text-color: #E0E0E0;\n$surface-color: #1E1E1E;",
-    "ignored_apps": [],
-    "apply_style": 1,
-    "apply_text_styles": 1,
-    "font_properties": {
-      "font_size": "16px",
-      "heading_font": "Inter",
-      "text_font": "Inter"
-    },
-    "background_color": "#0f172a",
-    "text_color": "#e2e8f0"
+    "google_font": "Inter",
+    "font_size": "16px",
+    "font_properties": "wght@300;400;500;600;700",
+    "custom_scss": "// XGC Brand Colors - Dark Theme\n$primary: #66BB6A;\n$primary-light: #A5D6A7;\n$primary-dark: #388E3C;\n$accent: #4CAF50;\n\n// Typography\n$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n$font-size-base: 1rem;\n\n// Dark surface colors\n$bg-color: #0f172a;\n$surface-color: #1e293b;\n$text-color: #e2e8f0;\n$border-color: #334155;",
+    "ignored_apps": []
   }
 ]

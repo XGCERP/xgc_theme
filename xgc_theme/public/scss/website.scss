@@ -1,0 +1,70 @@
+// XGC Theme - Website SCSS
+// Compiled by Frappe's website_theme_scss hook into every Website Theme build.
+// This file runs BEFORE per-theme custom_scss, so these serve as base defaults.
+
+// ── Import XGC variable definitions ──────────────────────────────────────────
+@import "variables";
+
+// ── Frappe v16 variable overrides (light theme defaults) ─────────────────────
+:root {
+  --primary:           #{$xgc-green-primary};
+  --primary-light:     #{$xgc-green-light};
+  --primary-dark:      #{$xgc-green-secondary};
+  --accent:            #{$xgc-accent};
+
+  --text-color:        #{$xgc-text-primary};
+  --text-muted:        #{$xgc-text-secondary};
+  --bg-color:          #{$xgc-white};
+  --border-color:      #{$xgc-light-gray};
+
+  --font-family-sans-serif: #{$font-family-sans-serif};
+  --font-size-base:    #{$font-size-base};
+}
+
+// ── Base typographic reset ────────────────────────────────────────────────────
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  color: $xgc-text-primary;
+  background-color: $xgc-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ── Navbar / header brand color ───────────────────────────────────────────────
+.navbar,
+.web-header {
+  background-color: $xgc-green-primary;
+  color: $xgc-white;
+
+  a,
+  .nav-link {
+    color: $xgc-white;
+
+    &:hover {
+      color: $xgc-green-light;
+    }
+  }
+}
+
+// ── Buttons ───────────────────────────────────────────────────────────────────
+.btn-primary {
+  background-color: $xgc-green-primary;
+  border-color: $xgc-green-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $xgc-green-secondary;
+    border-color: $xgc-green-secondary;
+  }
+}
+
+// ── Links ─────────────────────────────────────────────────────────────────────
+a {
+  color: $xgc-green-primary;
+
+  &:hover {
+    color: $xgc-green-secondary;
+  }
+}
+
